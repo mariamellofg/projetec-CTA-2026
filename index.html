@@ -4,7 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Sustentabilidade ao Seu Alcance | PROJETEC</title>
-<meta name="description" content="Projeto de sustentabilidade desenvolvido por alunas do CTA para incentivar o descarte correto de resíduos e a redução de desperdícios.">
+<meta name="description" content="Projeto educativo sobre sustentabilidade, reciclagem, descarte correto e redução de desperdícios.">
+
 <style>
 :root {
     --bordo: #6D1F35;
@@ -13,29 +14,26 @@
     --creme: #FFF8EE;
     --creme-escuro: #F0E4D3;
     --branco: #FFFFFF;
-    --sombra: 0 12px 35px rgba(92, 64, 51, 0.10);
+    --sombra: 0 12px 35px rgba(92,64,51,.10);
 }
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
 }
+
 body {
     font-family: Arial, Helvetica, sans-serif;
     background: var(--creme);
     color: var(--marrom);
     line-height: 1.7;
 }
-a {
-    color: inherit;
-}
-button, input, textarea {
-    font: inherit;
-}
-button, a {
-    -webkit-tap-highlight-color: transparent;
-}
+
+a { color: inherit; }
+button, input { font: inherit; }
+
 header {
     background: var(--bordo);
     color: var(--creme);
@@ -47,42 +45,46 @@ header {
     flex-wrap: wrap;
     border-bottom: 3px solid var(--dourado);
 }
+
 .logo {
     font-size: 19px;
     font-weight: 800;
     letter-spacing: 1px;
 }
-.logo span {
-    color: var(--dourado);
-}
+
+.logo span { color: var(--dourado); }
+
 nav {
     display: flex;
     flex-wrap: wrap;
     gap: 18px;
 }
+
 nav a {
     text-decoration: none;
     font-size: 13px;
     transition: color .25s;
 }
-nav a:hover {
-    color: var(--dourado);
-}
+
+nav a:hover { color: var(--dourado); }
+
 .hero {
     min-height: 590px;
     padding: 95px 8%;
     display: flex;
     align-items: center;
     background:
-        linear-gradient(90deg, rgba(65, 26, 36, .96), rgba(92, 64, 51, .78)),
+        linear-gradient(90deg, rgba(65,26,36,.96), rgba(92,64,51,.78)),
         url("https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1800&q=85")
         center/cover;
     color: var(--creme);
 }
+
 .hero-content {
     max-width: 800px;
     animation: aparecer 1s ease both;
 }
+
 .etiqueta {
     color: var(--dourado);
     font-size: 12px;
@@ -90,20 +92,21 @@ nav a:hover {
     text-transform: uppercase;
     font-weight: bold;
 }
+
 .hero h1 {
-    font-size: clamp(39px, 7vw, 76px);
+    font-size: clamp(39px,7vw,76px);
     line-height: 1.08;
     margin: 23px 0;
-    max-width: 800px;
 }
-.hero h1 span {
-    color: var(--dourado);
-}
+
+.hero h1 span { color: var(--dourado); }
+
 .hero p {
     font-size: 17px;
     max-width: 610px;
     margin-bottom: 30px;
 }
+
 .botao {
     display: inline-block;
     background: var(--dourado);
@@ -114,53 +117,55 @@ nav a:hover {
     border-radius: 5px;
     font-weight: bold;
     cursor: pointer;
-    transition: transform .25s, box-shadow .25s, background .25s;
+    transition: transform .25s, box-shadow .25s;
 }
+
 .botao:hover {
     transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(212, 175, 55, .25);
-    background: #E8C95F;
+    box-shadow: 0 8px 20px rgba(212,175,55,.25);
 }
+
 .botao-secundario {
     background: transparent;
     color: var(--creme);
     margin-left: 10px;
 }
+
 section {
     padding: 85px 8%;
     scroll-margin-top: 25px;
 }
+
 .cabecalho-secao {
     max-width: 760px;
     margin: 0 auto 42px;
     text-align: center;
 }
-.cabecalho-secao .etiqueta {
-    color: var(--marrom);
-}
+
+.cabecalho-secao .etiqueta { color: var(--marrom); }
+
 .cabecalho-secao h2 {
-    font-size: clamp(28px, 4vw, 43px);
+    font-size: clamp(28px,4vw,43px);
     line-height: 1.2;
     color: var(--bordo);
     margin: 12px 0 18px;
 }
+
 .linha-dourada {
     height: 3px;
     width: 65px;
     background: var(--dourado);
     margin: 20px auto;
 }
-.introducao {
-    max-width: 900px;
-    text-align: center;
-    margin: 0 auto;
-    font-size: 17px;
-}
+
+.cabecalho-secao > p:last-child { font-size: 17px; }
+
 .grade {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
     gap: 22px;
 }
+
 .cartao {
     background: var(--branco);
     border: 1px solid var(--creme-escuro);
@@ -169,29 +174,33 @@ section {
     box-shadow: var(--sombra);
     transition: transform .3s, border-color .3s, box-shadow .3s;
 }
+
 .cartao:hover {
     transform: translateY(-6px);
     border-color: var(--dourado);
-    box-shadow: 0 15px 35px rgba(92, 64, 51, .15);
+    box-shadow: 0 15px 35px rgba(92,64,51,.15);
 }
+
 .icone {
     font-size: 35px;
     margin-bottom: 12px;
 }
+
 .cartao h3 {
     color: var(--bordo);
     margin-bottom: 10px;
     font-size: 19px;
 }
-.fundo-alternativo {
-    background: var(--creme-escuro);
-}
+
+.fundo-alternativo { background: var(--creme-escuro); }
+
 .pesquisa {
     display: flex;
     gap: 10px;
     max-width: 700px;
     margin: 0 auto 25px;
 }
+
 .campo {
     width: 100%;
     min-width: 0;
@@ -200,45 +209,48 @@ section {
     border-radius: 5px;
     background: var(--branco);
     color: var(--marrom);
-    outline: none;
 }
+
 .campo:focus {
-    border-color: var(--bordo);
-    box-shadow: 0 0 0 3px rgba(109, 31, 53, .1);
+    outline: 2px solid var(--bordo);
 }
+
 .resultado {
     text-align: center;
     margin: 18px 0;
     font-weight: bold;
 }
+
 .tabela {
     width: 100%;
     border-collapse: collapse;
     background: var(--branco);
-    border-radius: 8px;
-    overflow: hidden;
 }
+
 .tabela th {
     background: var(--bordo);
     color: var(--creme);
     text-align: left;
 }
+
 .tabela th, .tabela td {
     padding: 15px;
     border-bottom: 1px solid var(--creme-escuro);
 }
-.tabela tr:hover td {
-    background: #FFF2D9;
-}
+
+.tabela tr:hover td { background: #FFF2D9; }
+
 .tabela-conteiner {
     overflow-x: auto;
     border-radius: 8px;
     box-shadow: var(--sombra);
 }
+
 .nota {
     margin-top: 20px;
     font-size: 13px;
 }
+
 .detalhes {
     margin-top: 30px;
     background: var(--branco);
@@ -246,108 +258,28 @@ section {
     border-left: 4px solid var(--dourado);
     padding: 20px;
 }
+
 .detalhes summary {
     color: var(--bordo);
     font-weight: bold;
     cursor: pointer;
 }
-.detalhes p {
-    margin-top: 12px;
-}
-.regra {
-    padding: 20px;
-    background: var(--branco);
-    border-radius: 6px;
-    border-left: 4px solid var(--dourado);
-    margin: 13px 0;
-    transition: transform .2s;
-}
-.regra:hover {
-    transform: translateX(5px);
-}
-.regra strong {
-    color: var(--bordo);
-}
-.desafio {
-    background: var(--branco);
-    max-width: 800px;
-    margin: auto;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: var(--sombra);
-}
-.item-desafio {
-    padding: 13px 0;
-    border-bottom: 1px solid var(--creme-escuro);
-}
-.item-desafio label {
-    display: flex;
-    gap: 12px;
-    align-items: center;
-    cursor: pointer;
-}
-.item-desafio input {
-    accent-color: var(--bordo);
-    width: 18px;
-    height: 18px;
-}
-.progresso-fundo {
-    width: 100%;
-    height: 12px;
-    background: var(--creme-escuro);
-    border-radius: 20px;
-    overflow: hidden;
-    margin: 18px 0 10px;
-}
-.progresso {
-    width: 0;
-    height: 100%;
-    background: var(--bordo);
-    transition: width .4s ease;
-}
-.mensagem-progresso {
-    color: var(--bordo);
-    font-weight: bold;
-}
-.mural {
-    max-width: 750px;
-    margin: auto;
-}
-.mural textarea {
-    min-height: 120px;
-    resize: vertical;
-}
-.mural .botao {
-    margin-top: 15px;
-}
-.aviso {
-    font-size: 13px;
-    margin-top: 12px;
-}
-.ideias {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 15px;
-    margin-top: 25px;
-}
-.ideia {
-    padding: 20px;
-    background: var(--branco);
-    border-radius: 8px;
-    border-top: 3px solid var(--dourado);
-    overflow-wrap: anywhere;
-}
+
+.detalhes p { margin-top: 12px; }
+
 .faixa {
     background: var(--bordo);
     color: var(--creme);
     text-align: center;
     padding: 70px 8%;
 }
+
 .faixa h2 {
     color: var(--dourado);
-    font-size: clamp(28px, 4vw, 43px);
+    font-size: clamp(28px,4vw,43px);
     margin-bottom: 18px;
 }
+
 footer {
     background: var(--marrom);
     color: var(--creme);
@@ -355,9 +287,9 @@ footer {
     padding: 35px 8%;
     border-top: 3px solid var(--dourado);
 }
-footer strong {
-    color: var(--dourado);
-}
+
+footer strong { color: var(--dourado); }
+
 .voltar-topo {
     position: fixed;
     right: 20px;
@@ -375,19 +307,23 @@ footer strong {
     transition: opacity .3s;
     z-index: 10;
 }
+
 .voltar-topo.visivel {
     opacity: 1;
     pointer-events: auto;
 }
+
 .revelar {
     opacity: 0;
     transform: translateY(24px);
     transition: opacity .7s ease, transform .7s ease;
 }
+
 .revelar.visivel {
     opacity: 1;
     transform: translateY(0);
 }
+
 @keyframes aparecer {
     from {
         opacity: 0;
@@ -398,41 +334,41 @@ footer strong {
         transform: translateY(0);
     }
 }
+
 @media (max-width: 650px) {
     header {
         justify-content: center;
         text-align: center;
     }
+
     nav {
         justify-content: center;
         gap: 12px;
     }
-    nav a {
-        font-size: 12px;
-    }
+
+    nav a { font-size: 12px; }
+
     .hero {
         min-height: 530px;
         padding: 65px 7%;
     }
-    section {
-        padding: 60px 6%;
-    }
-    .pesquisa {
-        flex-direction: column;
-    }
-    .botao-secundario {
-        margin: 12px 0 0;
-    }
-    .tabela th, .tabela td {
-        padding: 11px;
-    }
+
+    section { padding: 60px 6%; }
+
+    .pesquisa { flex-direction: column; }
+
+    .botao-secundario { margin: 12px 0 0; }
+
+    .tabela th, .tabela td { padding: 11px; }
 }
+
 @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after {
         scroll-behavior: auto !important;
         animation-duration: .01ms !important;
         transition-duration: .01ms !important;
     }
+
     .revelar {
         opacity: 1;
         transform: none;
@@ -440,6 +376,7 @@ footer strong {
 }
 </style>
 </head>
+
 <body>
 <header>
     <div class="logo">ECO<span>CONSCIENTE</span></div>
@@ -448,10 +385,10 @@ footer strong {
         <a href="#projeto">Projeto</a>
         <a href="#banco">Descarte</a>
         <a href="#desperdicio">5 R's</a>
-        <a href="#desafio">Desafio</a>
-        <a href="#mural">Participe</a>
+        <a href="#sobre">Sobre</a>
     </nav>
 </header>
+
 <main>
 <section class="hero" id="inicio">
     <div class="hero-content">
@@ -465,6 +402,7 @@ footer strong {
         <a class="botao botao-secundario" href="#projeto">Conheça nossa ideia</a>
     </div>
 </section>
+
 <section id="projeto">
     <div class="cabecalho-secao revelar">
         <p class="etiqueta">Nosso propósito</p>
@@ -476,17 +414,20 @@ footer strong {
             sobre descarte correto e incentivar hábitos conscientes.
         </p>
     </div>
+
     <div class="grade">
         <article class="cartao revelar">
             <div class="icone">♻️</div>
             <h3>Descarte correto</h3>
             <p>Consulte materiais e descubra orientações para dar a eles o destino adequado.</p>
         </article>
+
         <article class="cartao revelar">
             <div class="icone">🌱</div>
             <h3>Menos desperdício</h3>
             <p>Aprenda maneiras práticas de economizar recursos e aproveitar melhor o que consumimos.</p>
         </article>
+
         <article class="cartao revelar">
             <div class="icone">💡</div>
             <h3>Tecnologia consciente</h3>
@@ -494,6 +435,7 @@ footer strong {
         </article>
     </div>
 </section>
+
 <section class="fundo-alternativo" id="banco">
     <div class="cabecalho-secao revelar">
         <p class="etiqueta">Consulta inteligente</p>
@@ -501,23 +443,22 @@ footer strong {
         <div class="linha-dourada"></div>
         <p>
             Pesquise um material e consulte sua categoria e as orientações
-            de descarte. Nosso catálogo educativo reúne resíduos comuns
-            e materiais que exigem coleta específica.
+            de descarte. O catálogo reúne resíduos comuns e materiais
+            que exigem coleta específica.
         </p>
     </div>
+
     <div class="pesquisa revelar">
-        <input
-            class="campo"
-            type="search"
-            id="busca"
-            placeholder="Pesquise: papel, pilha, vidro..."
-            aria-label="Pesquisar material"
-        >
+        <input class="campo" type="search" id="busca"
+               placeholder="Pesquise: papel, pilha, vidro..."
+               aria-label="Pesquisar material">
         <button class="botao" id="botaoPesquisar" type="button">Pesquisar</button>
     </div>
+
     <p class="resultado" id="mensagemBusca" aria-live="polite">
         Consulte os materiais disponíveis abaixo.
     </p>
+
     <div class="tabela-conteiner revelar">
         <table class="tabela">
             <thead>
@@ -586,10 +527,12 @@ footer strong {
             </tbody>
         </table>
     </div>
+
     <p class="nota">
         Importante: as regras de coleta variam conforme a localidade.
         Confirme se o ponto escolhido recebe o material antes de se deslocar.
     </p>
+
     <details class="detalhes revelar">
         <summary>Por que alguns materiais precisam de coleta especial?</summary>
         <p>
@@ -600,42 +543,49 @@ footer strong {
         </p>
     </details>
 </section>
+
 <section id="desperdicio">
     <div class="cabecalho-secao revelar">
         <p class="etiqueta">Consumo inteligente</p>
-        <h2>Conheça a regra dos 5 R's</h2>
+        <h2>Conheça a regra dos 5 Rs</h2>
         <div class="linha-dourada"></div>
         <p>
             Reduzir o desperdício começa antes mesmo de o resíduo ser gerado.
             Conheça cinco atitudes que podem fazer diferença no dia a dia.
         </p>
     </div>
+
     <div class="grade">
         <article class="cartao revelar">
             <div class="icone">🤔</div>
             <h3>01. Repensar</h3>
             <p>Reflita sobre suas escolhas e pergunte se realmente precisa comprar algo.</p>
         </article>
+
         <article class="cartao revelar">
             <div class="icone">🙅</div>
             <h3>02. Recusar</h3>
             <p>Evite produtos descartáveis e embalagens desnecessárias sempre que possível.</p>
         </article>
+
         <article class="cartao revelar">
             <div class="icone">📉</div>
             <h3>03. Reduzir</h3>
             <p>Consuma apenas o necessário e planeje as compras para evitar excessos.</p>
         </article>
+
         <article class="cartao revelar">
             <div class="icone">🫙</div>
             <h3>04. Reutilizar</h3>
             <p>Dê novos usos aos objetos e aproveite os materiais sempre que for seguro.</p>
         </article>
+
         <article class="cartao revelar">
             <div class="icone">♻️</div>
             <h3>05. Reciclar</h3>
             <p>Separe corretamente os resíduos recicláveis e encaminhe-os à coleta adequada.</p>
         </article>
+
         <article class="cartao revelar">
             <div class="icone">🥕</div>
             <h3>Evite desperdícios</h3>
@@ -643,84 +593,7 @@ footer strong {
         </article>
     </div>
 </section>
-<section class="fundo-alternativo" id="desafio">
-    <div class="cabecalho-secao revelar">
-        <p class="etiqueta">Ação sustentável</p>
-        <h2>Meu desafio ecológico</h2>
-        <div class="linha-dourada"></div>
-        <p>Marque as atitudes que você praticou e acompanhe seu progresso!</p>
-    </div>
-    <div class="desafio revelar">
-        <div class="item-desafio">
-            <label>
-                <input type="checkbox" class="atitude">
-                Economizei água.
-            </label>
-        </div>
-        <div class="item-desafio">
-            <label>
-                <input type="checkbox" class="atitude">
-                Evitei desperdiçar alimentos.
-            </label>
-        </div>
-        <div class="item-desafio">
-            <label>
-                <input type="checkbox" class="atitude">
-                Separei materiais recicláveis.
-            </label>
-        </div>
-        <div class="item-desafio">
-            <label>
-                <input type="checkbox" class="atitude">
-                Reutilizei algum objeto.
-            </label>
-        </div>
-        <div class="item-desafio">
-            <label>
-                <input type="checkbox" class="atitude">
-                Evitei uma embalagem descartável desnecessária.
-            </label>
-        </div>
-        <div class="progresso-fundo" role="progressbar"
-             aria-label="Progresso do desafio"
-             aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"
-             id="barraFundo">
-            <div class="progresso" id="barraProgresso"></div>
-        </div>
-        <p class="mensagem-progresso" id="textoProgresso" aria-live="polite">
-            Você completou 0 de 5 atitudes.
-        </p>
-    </div>
-</section>
-<section id="mural">
-    <div class="cabecalho-secao revelar">
-        <p class="etiqueta">Sua voz importa</p>
-        <h2>Mural de ideias sustentáveis</h2>
-        <div class="linha-dourada"></div>
-        <p>
-            Que atitude sustentável você gostaria de compartilhar?
-            Escreva uma ideia e inspire outras pessoas a cuidar do planeta.
-        </p>
-    </div>
-    <div class="mural revelar">
-        <label for="ideia" class="etiqueta">Compartilhe sua ideia</label>
-        <textarea
-            class="campo"
-            id="ideia"
-            maxlength="250"
-            placeholder="Ex.: Podemos criar uma campanha para reduzir o desperdício de alimentos..."
-            style="margin-top: 10px;"
-        ></textarea>
-        <button class="botao" id="botaoIdeia" type="button">
-            Adicionar ideia
-        </button>
-        <p class="aviso">
-            Demonstração local: as ideias adicionadas aparecem somente
-            neste navegador e não são enviadas para outros visitantes.
-        </p>
-        <div class="ideias" id="listaIdeias" aria-live="polite"></div>
-    </div>
-</section>
+
 <section class="fundo-alternativo" id="sobre">
     <div class="cabecalho-secao revelar">
         <p class="etiqueta">Sobre o projeto</p>
@@ -734,56 +607,66 @@ footer strong {
             descarte de resíduos e redução de desperdícios.
         </p>
     </div>
+
     <div class="grade">
         <article class="cartao revelar">
             <h3>Nosso objetivo</h3>
             <p>Facilitar o acesso à informação e incentivar hábitos mais responsáveis.</p>
         </article>
+
         <article class="cartao revelar">
             <h3>Nossa proposta</h3>
-            <p>Reunir consulta de materiais, orientações educativas e ferramentas interativas.</p>
+            <p>Reunir orientações educativas sobre materiais, reciclagem e consumo consciente.</p>
         </article>
+
         <article class="cartao revelar">
             <h3>Nosso compromisso</h3>
             <p>Promover a conscientização e valorizar escolhas que contribuam para um futuro sustentável.</p>
         </article>
     </div>
 </section>
+
 <section class="faixa">
     <p class="etiqueta">O futuro começa agora</p>
     <h2>Faça parte da mudança.</h2>
     <p>Um planeta melhor começa nas escolhas que fazemos todos os dias.</p>
-    <a href="#banco" class="botao" style="margin-top: 25px;">
+    <a href="#banco" class="botao" style="margin-top:25px;">
         Consultar descarte correto
     </a>
 </section>
 </main>
+
 <footer>
     <p><strong>PROJETEC · CTA</strong></p>
     <p>Sustentabilidade ao Seu Alcance</p>
     <p>Desenvolvido por alunas do CTA.</p>
-    <p style="margin-top: 15px; font-size: 12px;">
+    <p style="margin-top:15px;font-size:12px;">
         Projeto educativo de conscientização ambiental.
     </p>
 </footer>
+
 <button class="voltar-topo" id="voltarTopo" aria-label="Voltar ao início">
     ↑
 </button>
+
 <script>
-/* Pesquisa de materiais */
 const busca = document.getElementById("busca");
 const linhas = Array.from(document.querySelectorAll("#materiais tr"));
 const mensagemBusca = document.getElementById("mensagemBusca");
+
 function pesquisarMaterial() {
     const termo = busca.value.trim().toLocaleLowerCase("pt-BR");
     let total = 0;
+
     linhas.forEach(function(linha) {
         const corresponde = linha.textContent
             .toLocaleLowerCase("pt-BR")
             .includes(termo);
+
         linha.hidden = !corresponde;
         if (corresponde) total++;
     });
+
     if (termo === "") {
         linhas.forEach(linha => linha.hidden = false);
         mensagemBusca.textContent = "Exibindo todos os materiais cadastrados.";
@@ -797,72 +680,16 @@ function pesquisarMaterial() {
                 : " materiais encontrados.");
     }
 }
+
 document.getElementById("botaoPesquisar")
     .addEventListener("click", pesquisarMaterial);
+
 busca.addEventListener("keydown", function(event) {
     if (event.key === "Enter") pesquisarMaterial();
 });
-/* Desafio sustentável */
-const atitudes = document.querySelectorAll(".atitude");
-const barraProgresso = document.getElementById("barraProgresso");
-const barraFundo = document.getElementById("barraFundo");
-const textoProgresso = document.getElementById("textoProgresso");
-function atualizarDesafio() {
-    const marcadas = document.querySelectorAll(".atitude:checked").length;
-    const percentual = (marcadas / atitudes.length) * 100;
-    barraProgresso.style.width = percentual + "%";
-    barraFundo.setAttribute("aria-valuenow", percentual);
-    textoProgresso.textContent =
-        "Você completou " + marcadas + " de " + atitudes.length + " atitudes.";
-    if (marcadas === atitudes.length) {
-        textoProgresso.textContent =
-            "Parabéns! Você completou o desafio sustentável!";
-    }
-    try {
-        localStorage.setItem("ecoAtitudes", JSON.stringify(
-            Array.from(atitudes).map(item => item.checked)
-        ));
-    } catch (e) {
-        /* O desafio continua funcionando sem armazenamento local. */
-    }
-}
-try {
-    const salvas = JSON.parse(localStorage.getItem("ecoAtitudes") || "null");
-    if (Array.isArray(salvas)) {
-        atitudes.forEach(function(item, indice) {
-            item.checked = Boolean(salvas[indice]);
-        });
-    }
-} catch (e) {
-    /* O site continua funcionando se o armazenamento estiver indisponível. */
-}
-atitudes.forEach(item => item.addEventListener("change", atualizarDesafio));
-atualizarDesafio();
-/* Mural de ideias: demonstração local */
-const campoIdeia = document.getElementById("ideia");
-const listaIdeias = document.getElementById("listaIdeias");
-const botaoIdeia = document.getElementById("botaoIdeia");
-function adicionarIdeia(texto) {
-    const cartao = document.createElement("article");
-    cartao.className = "ideia";
-    const titulo = document.createElement("h3");
-    titulo.textContent = "Ideia sustentável";
-    const paragrafo = document.createElement("p");
-    paragrafo.textContent = texto;
-    cartao.append(titulo, paragrafo);
-    listaIdeias.prepend(cartao);
-}
-botaoIdeia.addEventListener("click", function() {
-    const texto = campoIdeia.value.trim();
-    if (!texto) {
-        campoIdeia.focus();
-        return;
-    }
-    adicionarIdeia(texto);
-    campoIdeia.value = "";
-});
-/* Animações ao rolar a página */
+
 const elementos = document.querySelectorAll(".revelar");
+
 if ("IntersectionObserver" in window) {
     const observador = new IntersectionObserver(function(entradas, obs) {
         entradas.forEach(function(entrada) {
@@ -872,227 +699,21 @@ if ("IntersectionObserver" in window) {
             }
         });
     }, { threshold: 0.12 });
+
     elementos.forEach(elemento => observador.observe(elemento));
 } else {
     elementos.forEach(elemento => elemento.classList.add("visivel"));
 }
-/* Botão de voltar ao topo */
+
 const voltarTopo = document.getElementById("voltarTopo");
+
 window.addEventListener("scroll", function() {
     voltarTopo.classList.toggle("visivel", window.scrollY > 400);
 });
+
 voltarTopo.addEventListener("click", function() {
     window.scrollTo({ top: 0, behavior: "smooth" });
 });
 </script>
-    
-<style>
-.card {
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-  cursor: pointer;
-}
-
-.card:active {
-  transform: scale(1.04);
-  box-shadow: 0 8px 20px rgba(92, 64, 51, 0.22);
-}
-</style>
-
-<style>
-.jogos-sustentaveis {
-  background: #fff8ee;
-  color: #5c4033;
-  padding: 24px 14px;
-  border-radius: 18px;
-  font-family: Arial, sans-serif;
-}
-.jogos-sustentaveis h2 {
-  color: #6d1f35;
-  text-align: center;
-}
-.jogo-card {
-  background: white;
-  border: 2px solid #eadbc9;
-  border-radius: 16px;
-  padding: 18px;
-  margin: 18px 0;
-  box-shadow: 0 4px 12px #5c403315;
-}
-.jogo-card button {
-  background: #6d1f35;
-  color: white;
-  border: 0;
-  border-radius: 10px;
-  padding: 12px;
-  margin: 5px 3px;
-  cursor: pointer;
-  font-size: 15px;
-}
-.jogo-card button:active {
-  transform: scale(.96);
-}
-.jogo-resposta {
-  font-weight: bold;
-  min-height: 24px;
-  margin-top: 12px;
-}
-</style>
-
-<section class="jogos-sustentaveis" id="jogos">
-  <h2>🎮 Espaço Interativo</h2>
-  <p style="text-align:center">
-    Aprenda, brinque e ajude o planeta!
-  </p>
-
-  <div class="jogo-card">
-    <h3>🧠 Quiz da Sustentabilidade</h3>
-    <p id="quiz-pergunta">Qual atitude economiza água?</p>
-    <div id="quiz-opcoes">
-      <button onclick="responderQuiz(0)">Deixar a torneira aberta</button>
-      <button onclick="responderQuiz(1)">Fechar a torneira ao escovar os dentes</button>
-      <button onclick="responderQuiz(2)">Lavar a calçada com mangueira</button>
-    </div>
-    <p class="jogo-resposta" id="quiz-resultado"></p>
-    <p>Pontos: <span id="quiz-pontos">0</span></p>
-    <button onclick="proximaPergunta()">Próxima pergunta ➜</button>
-  </div>
-
-  <div class="jogo-card">
-    <h3>🎡 Roleta Ecológica</h3>
-    <p id="roleta-desafio">Gire para descobrir seu desafio!</p>
-    <button onclick="girarRoleta()">Girar a roleta!</button>
-  </div>
-
-  <div class="jogo-card">
-    <h3>♻️ Para onde vai esse resíduo?</h3>
-    <p id="lixo-pergunta">Onde devemos descartar uma casca de banana?</p>
-    <div id="lixo-opcoes">
-      <button onclick="responderLixo(0)">Recicláveis</button>
-      <button onclick="responderLixo(1)">Orgânicos</button>
-      <button onclick="responderLixo(2)">Eletrônicos</button>
-    </div>
-    <p class="jogo-resposta" id="lixo-resultado"></p>
-    <p>Pontos: <span id="lixo-pontos">0</span></p>
-    <button onclick="proximoLixo()">Próximo resíduo ➜</button>
-  </div>
-</section>
-
-<script>
-const perguntasQuiz = [
-  {
-    p: "Qual atitude economiza água?",
-    o: ["Deixar a torneira aberta", "Fechar a torneira ao escovar os dentes", "Lavar a calçada com mangueira"],
-    c: 1
-  },
-  {
-    p: "Onde devemos colocar uma garrafa plástica limpa?",
-    o: ["Recicláveis", "Orgânicos", "Rejeitos sempre"],
-    c: 0
-  },
-  {
-    p: "Qual atitude reduz o desperdício de alimentos?",
-    o: ["Jogar sobras fora", "Planejar as compras", "Comprar sem necessidade"],
-    c: 1
-  },
-  {
-    p: "Onde descartar pilhas usadas?",
-    o: ["No lixo orgânico", "Na rua", "Em ponto de coleta específico"],
-    c: 2
-  }
-];
-
-let quizAtual = 0;
-let quizPontos = 0;
-let quizRespondido = false;
-
-function responderQuiz(i) {
-  if (quizRespondido) return;
-  quizRespondido = true;
-  const p = perguntasQuiz[quizAtual];
-  const r = document.getElementById("quiz-resultado");
-  if (i === p.c) {
-    quizPontos++;
-    document.getElementById("quiz-pontos").textContent = quizPontos;
-    r.textContent = "🎉 Acertou! Muito bem!";
-  } else {
-    r.textContent = "💡 Quase! " + p.o[p.c] + " é a resposta correta.";
-  }
-}
-
-function proximaPergunta() {
-  quizAtual++;
-  if (quizAtual >= perguntasQuiz.length) {
-    alert("Quiz finalizado! Você fez " + quizPontos + " de " + perguntasQuiz.length + " pontos!");
-    quizAtual = 0;
-    quizPontos = 0;
-    document.getElementById("quiz-pontos").textContent = "0";
-  }
-  quizRespondido = false;
-  const p = perguntasQuiz[quizAtual];
-  document.getElementById("quiz-pergunta").textContent = p.p;
-  document.getElementById("quiz-resultado").textContent = "";
-  document.getElementById("quiz-opcoes").innerHTML = p.o.map((op, i) =>
-    '<button onclick="responderQuiz(' + i + ')">' + op + '</button>'
-  ).join("");
-}
-
-const desafios = [
-  "💧 Tome banhos mais curtos hoje!",
-  "♻️ Separe os recicláveis corretamente!",
-  "🌱 Cuide de uma planta!",
-  "💡 Apague as luzes que não estiver usando!",
-  "🥕 Evite desperdiçar alimentos!",
-  "🛍️ Reutilize uma sacola ou embalagem!"
-];
-
-function girarRoleta() {
-  const botao = document.querySelector("#jogos .jogo-card:nth-of-type(2) button");
-  const resultado = document.getElementById("roleta-desafio");
-  resultado.textContent = "🎡 Girando...";
-  botao.disabled = true;
-  setTimeout(() => {
-    resultado.textContent = desafios[Math.floor(Math.random() * desafios.length)];
-    botao.disabled = false;
-  }, 700);
-}
-
-const perguntasLixo = [
-  { p: "Onde devemos descartar uma casca de banana?", o: ["Recicláveis", "Orgânicos", "Eletrônicos"], c: 1 },
-  { p: "Onde descartar uma garrafa plástica vazia e limpa?", o: ["Recicláveis", "Orgânicos", "Pilhas"], c: 0 },
-  { p: "Onde levar uma pilha usada?", o: ["Lixo comum", "Comida", "Ponto de coleta específico"], c: 2 },
-  { p: "Onde descartar restos de verduras?", o: ["Eletrônicos", "Orgânicos", "Vidro"], c: 1 },
-  { p: "Onde colocar um jornal limpo e seco?", o: ["Papel reciclável", "Orgânicos", "Pilhas"], c: 0 }
-];
-
-let lixoAtual = 0;
-let lixoPontos = 0;
-let lixoRespondido = false;
-
-function responderLixo(i) {
-  if (lixoRespondido) return;
-  lixoRespondido = true;
-  const p = perguntasLixo[lixoAtual];
-  const r = document.getElementById("lixo-resultado");
-  if (i === p.c) {
-    lixoPontos++;
-    document.getElementById("lixo-pontos").textContent = lixoPontos;
-    r.textContent = "🌟 Acertou! Mandou bem!";
-  } else {
-    r.textContent = "💚 A resposta correta é: " + p.o[p.c] + ".";
-  }
-}
-
-function proximoLixo() {
-  lixoAtual = (lixoAtual + 1) % perguntasLixo.length;
-  lixoRespondido = false;
-  const p = perguntasLixo[lixoAtual];
-  document.getElementById("lixo-pergunta").textContent = p.p;
-  document.getElementById("lixo-resultado").textContent = "";
-  document.getElementById("lixo-opcoes").innerHTML = p.o.map((op, i) =>
-    '<button onclick="responderLixo(' + i + ')">' + op + '</button>'
-  ).join("");
-}
-</script>
-
 </body>
 </html>
