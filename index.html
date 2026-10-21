@@ -898,5 +898,201 @@ voltarTopo.addEventListener("click", function() {
 }
 </style>
 
+<style>
+.jogos-sustentaveis {
+  background: #fff8ee;
+  color: #5c4033;
+  padding: 24px 14px;
+  border-radius: 18px;
+  font-family: Arial, sans-serif;
+}
+.jogos-sustentaveis h2 {
+  color: #6d1f35;
+  text-align: center;
+}
+.jogo-card {
+  background: white;
+  border: 2px solid #eadbc9;
+  border-radius: 16px;
+  padding: 18px;
+  margin: 18px 0;
+  box-shadow: 0 4px 12px #5c403315;
+}
+.jogo-card button {
+  background: #6d1f35;
+  color: white;
+  border: 0;
+  border-radius: 10px;
+  padding: 12px;
+  margin: 5px 3px;
+  cursor: pointer;
+  font-size: 15px;
+}
+.jogo-card button:active {
+  transform: scale(.96);
+}
+.jogo-resposta {
+  font-weight: bold;
+  min-height: 24px;
+  margin-top: 12px;
+}
+</style>
+
+<section class="jogos-sustentaveis" id="jogos">
+  <h2>🎮 Espaço Interativo</h2>
+  <p style="text-align:center">
+    Aprenda, brinque e ajude o planeta!
+  </p>
+
+  <div class="jogo-card">
+    <h3>🧠 Quiz da Sustentabilidade</h3>
+    <p id="quiz-pergunta">Qual atitude economiza água?</p>
+    <div id="quiz-opcoes">
+      <button onclick="responderQuiz(0)">Deixar a torneira aberta</button>
+      <button onclick="responderQuiz(1)">Fechar a torneira ao escovar os dentes</button>
+      <button onclick="responderQuiz(2)">Lavar a calçada com mangueira</button>
+    </div>
+    <p class="jogo-resposta" id="quiz-resultado"></p>
+    <p>Pontos: <span id="quiz-pontos">0</span></p>
+    <button onclick="proximaPergunta()">Próxima pergunta ➜</button>
+  </div>
+
+  <div class="jogo-card">
+    <h3>🎡 Roleta Ecológica</h3>
+    <p id="roleta-desafio">Gire para descobrir seu desafio!</p>
+    <button onclick="girarRoleta()">Girar a roleta!</button>
+  </div>
+
+  <div class="jogo-card">
+    <h3>♻️ Para onde vai esse resíduo?</h3>
+    <p id="lixo-pergunta">Onde devemos descartar uma casca de banana?</p>
+    <div id="lixo-opcoes">
+      <button onclick="responderLixo(0)">Recicláveis</button>
+      <button onclick="responderLixo(1)">Orgânicos</button>
+      <button onclick="responderLixo(2)">Eletrônicos</button>
+    </div>
+    <p class="jogo-resposta" id="lixo-resultado"></p>
+    <p>Pontos: <span id="lixo-pontos">0</span></p>
+    <button onclick="proximoLixo()">Próximo resíduo ➜</button>
+  </div>
+</section>
+
+<script>
+const perguntasQuiz = [
+  {
+    p: "Qual atitude economiza água?",
+    o: ["Deixar a torneira aberta", "Fechar a torneira ao escovar os dentes", "Lavar a calçada com mangueira"],
+    c: 1
+  },
+  {
+    p: "Onde devemos colocar uma garrafa plástica limpa?",
+    o: ["Recicláveis", "Orgânicos", "Rejeitos sempre"],
+    c: 0
+  },
+  {
+    p: "Qual atitude reduz o desperdício de alimentos?",
+    o: ["Jogar sobras fora", "Planejar as compras", "Comprar sem necessidade"],
+    c: 1
+  },
+  {
+    p: "Onde descartar pilhas usadas?",
+    o: ["No lixo orgânico", "Na rua", "Em ponto de coleta específico"],
+    c: 2
+  }
+];
+
+let quizAtual = 0;
+let quizPontos = 0;
+let quizRespondido = false;
+
+function responderQuiz(i) {
+  if (quizRespondido) return;
+  quizRespondido = true;
+  const p = perguntasQuiz[quizAtual];
+  const r = document.getElementById("quiz-resultado");
+  if (i === p.c) {
+    quizPontos++;
+    document.getElementById("quiz-pontos").textContent = quizPontos;
+    r.textContent = "🎉 Acertou! Muito bem!";
+  } else {
+    r.textContent = "💡 Quase! " + p.o[p.c] + " é a resposta correta.";
+  }
+}
+
+function proximaPergunta() {
+  quizAtual++;
+  if (quizAtual >= perguntasQuiz.length) {
+    alert("Quiz finalizado! Você fez " + quizPontos + " de " + perguntasQuiz.length + " pontos!");
+    quizAtual = 0;
+    quizPontos = 0;
+    document.getElementById("quiz-pontos").textContent = "0";
+  }
+  quizRespondido = false;
+  const p = perguntasQuiz[quizAtual];
+  document.getElementById("quiz-pergunta").textContent = p.p;
+  document.getElementById("quiz-resultado").textContent = "";
+  document.getElementById("quiz-opcoes").innerHTML = p.o.map((op, i) =>
+    '<button onclick="responderQuiz(' + i + ')">' + op + '</button>'
+  ).join("");
+}
+
+const desafios = [
+  "💧 Tome banhos mais curtos hoje!",
+  "♻️ Separe os recicláveis corretamente!",
+  "🌱 Cuide de uma planta!",
+  "💡 Apague as luzes que não estiver usando!",
+  "🥕 Evite desperdiçar alimentos!",
+  "🛍️ Reutilize uma sacola ou embalagem!"
+];
+
+function girarRoleta() {
+  const botao = document.querySelector("#jogos .jogo-card:nth-of-type(2) button");
+  const resultado = document.getElementById("roleta-desafio");
+  resultado.textContent = "🎡 Girando...";
+  botao.disabled = true;
+  setTimeout(() => {
+    resultado.textContent = desafios[Math.floor(Math.random() * desafios.length)];
+    botao.disabled = false;
+  }, 700);
+}
+
+const perguntasLixo = [
+  { p: "Onde devemos descartar uma casca de banana?", o: ["Recicláveis", "Orgânicos", "Eletrônicos"], c: 1 },
+  { p: "Onde descartar uma garrafa plástica vazia e limpa?", o: ["Recicláveis", "Orgânicos", "Pilhas"], c: 0 },
+  { p: "Onde levar uma pilha usada?", o: ["Lixo comum", "Comida", "Ponto de coleta específico"], c: 2 },
+  { p: "Onde descartar restos de verduras?", o: ["Eletrônicos", "Orgânicos", "Vidro"], c: 1 },
+  { p: "Onde colocar um jornal limpo e seco?", o: ["Papel reciclável", "Orgânicos", "Pilhas"], c: 0 }
+];
+
+let lixoAtual = 0;
+let lixoPontos = 0;
+let lixoRespondido = false;
+
+function responderLixo(i) {
+  if (lixoRespondido) return;
+  lixoRespondido = true;
+  const p = perguntasLixo[lixoAtual];
+  const r = document.getElementById("lixo-resultado");
+  if (i === p.c) {
+    lixoPontos++;
+    document.getElementById("lixo-pontos").textContent = lixoPontos;
+    r.textContent = "🌟 Acertou! Mandou bem!";
+  } else {
+    r.textContent = "💚 A resposta correta é: " + p.o[p.c] + ".";
+  }
+}
+
+function proximoLixo() {
+  lixoAtual = (lixoAtual + 1) % perguntasLixo.length;
+  lixoRespondido = false;
+  const p = perguntasLixo[lixoAtual];
+  document.getElementById("lixo-pergunta").textContent = p.p;
+  document.getElementById("lixo-resultado").textContent = "";
+  document.getElementById("lixo-opcoes").innerHTML = p.o.map((op, i) =>
+    '<button onclick="responderLixo(' + i + ')">' + op + '</button>'
+  ).join("");
+}
+</script>
+
 </body>
 </html>
