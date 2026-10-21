@@ -1,590 +1,889 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Aprenda a descartar resíduos corretamente e reduzir desperdícios com nosso guia de sustentabilidade.">
-    <title>Sustentabilidade ao Seu Alcance</title>
-    <style>
-        :root {
-            --bordo: #6D1F35;
-            --marrom: #5C4033;
-            --dourado: #D4AF37;
-            --creme: #FFF8EE;
-            --verde: #637C59;
-        }
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            scroll-behavior: smooth;
-        }
-        body {
-            font-family: Arial, sans-serif;
-            background-color: var(--creme);
-            color: var(--marrom);
-            line-height: 1.8;
-        }
-        header {
-            background-color: var(--bordo);
-            color: white;
-            padding: 22px 7%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 15px;
-        }
-        .logo {
-            font-size: 23px;
-            font-weight: bold;
-            color: var(--dourado);
-        }
-        nav {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 18px;
-        }
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-size: 14px;
-        }
-        nav a:hover {
-            color: var(--dourado);
-        }
-        .hero {
-            background: linear-gradient(135deg, #6D1F35, #5C4033);
-            color: white;
-            padding: 90px 8%;
-            text-align: center;
-        }
-        .hero .tag {
-            color: var(--dourado);
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            font-size: 13px;
-        }
-        .hero h1 {
-            font-size: clamp(32px, 5vw, 52px);
-            line-height: 1.2;
-            margin: 20px auto;
-            max-width: 850px;
-        }
-        .hero p {
-            max-width: 720px;
-            margin: 0 auto 28px;
-            font-size: 17px;
-        }
-        .botao {
-            display: inline-block;
-            background-color: var(--dourado);
-            color: #38271D;
-            padding: 12px 25px;
-            border-radius: 6px;
-            text-decoration: none;
-            font-weight: bold;
-            border: none;
-            cursor: pointer;
-        }
-        .botao:hover {
-            background-color: #F0D77C;
-        }
-        section {
-            padding: 65px 8%;
-            scroll-margin-top: 20px;
-        }
-        .titulo {
-            text-align: center;
-            margin-bottom: 35px;
-        }
-        .titulo span {
-            color: var(--verde);
-            font-size: 13px;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            font-weight: bold;
-        }
-        h2 {
-            color: var(--bordo);
-            font-size: 30px;
-            margin: 8px 0 15px;
-        }
-        h3 {
-            color: var(--bordo);
-            margin-bottom: 10px;
-        }
-        .introducao {
-            max-width: 850px;
-            margin: auto;
-            text-align: center;
-        }
-        .cartoes {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 20px;
-            margin-top: 35px;
-        }
-        .cartao {
-            background: white;
-            border: 1px solid #E8DCCB;
-            border-radius: 12px;
-            padding: 25px;
-            box-shadow: 0 4px 12px #5C403310;
-        }
-        .icone {
-            font-size: 34px;
-            margin-bottom: 10px;
-        }
-        .fundo-claro {
-            background-color: #F1E6D7;
-        }
-        .pesquisa {
-            max-width: 700px;
-            margin: 0 auto 30px;
-            display: flex;
-            gap: 10px;
-            flex-wrap: wrap;
-        }
-        .pesquisa input {
-            flex: 1;
-            min-width: 180px;
-            padding: 14px;
-            border: 1px solid #B9A18D;
-            border-radius: 6px;
-            font-size: 16px;
-        }
-        .resultado {
-            text-align: center;
-            margin: 20px auto;
-            font-weight: bold;
-        }
-        .tabela-container {
-            overflow-x: auto;
-            background: white;
-            border-radius: 10px;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            min-width: 550px;
-        }
-        th {
-            background-color: var(--bordo);
-            color: white;
-        }
-        th, td {
-            padding: 15px;
-            text-align: left;
-            border-bottom: 1px solid #E8DCCB;
-        }
-        tr:hover td {
-            background-color: #FFF1D6;
-        }
-        .regra {
-            border-left: 4px solid var(--dourado);
-            padding: 15px 20px;
-            background: white;
-            border-radius: 5px;
-            margin-bottom: 15px;
-        }
-        .regra strong {
-            color: var(--bordo);
-        }
-        .destaque {
-            background-color: var(--bordo);
-            color: white;
-            text-align: center;
-        }
-        .destaque h2 {
-            color: var(--dourado);
-        }
-        footer {
-            background-color: var(--marrom);
-            color: white;
-            text-align: center;
-            padding: 30px 8%;
-        }
-        footer strong {
-            color: var(--dourado);
-        }
-        @media (max-width: 600px) {
-            header {
-                justify-content: center;
-                text-align: center;
-            }
-            nav {
-                justify-content: center;
-            }
-            .hero {
-                padding: 60px 6%;
-            }
-            section {
-                padding: 45px 6%;
-            }
-            h2 {
-                font-size: 25px;
-            }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sustentabilidade ao Seu Alcance | PROJETEC</title>
+<meta name="description" content="Projeto de sustentabilidade desenvolvido por alunas do CTA para incentivar o descarte correto de resíduos e a redução de desperdícios.">
+<style>
+:root {
+    --bordo: #6D1F35;
+    --marrom: #5C4033;
+    --dourado: #D4AF37;
+    --creme: #FFF8EE;
+    --creme-escuro: #F0E4D3;
+    --branco: #FFFFFF;
+    --sombra: 0 12px 35px rgba(92, 64, 51, 0.10);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--creme);
+    color: var(--marrom);
+    line-height: 1.7;
+}
+a {
+    color: inherit;
+}
+button, input, textarea {
+    font: inherit;
+}
+button, a {
+    -webkit-tap-highlight-color: transparent;
+}
+header {
+    background: var(--bordo);
+    color: var(--creme);
+    padding: 18px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    border-bottom: 3px solid var(--dourado);
+}
+.logo {
+    font-size: 19px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+.logo span {
+    color: var(--dourado);
+}
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+nav a {
+    text-decoration: none;
+    font-size: 13px;
+    transition: color .25s;
+}
+nav a:hover {
+    color: var(--dourado);
+}
+.hero {
+    min-height: 590px;
+    padding: 95px 8%;
+    display: flex;
+    align-items: center;
+    background:
+        linear-gradient(90deg, rgba(65, 26, 36, .96), rgba(92, 64, 51, .78)),
+        url("https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1800&q=85")
+        center/cover;
+    color: var(--creme);
+}
+.hero-content {
+    max-width: 800px;
+    animation: aparecer 1s ease both;
+}
+.etiqueta {
+    color: var(--dourado);
+    font-size: 12px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.hero h1 {
+    font-size: clamp(39px, 7vw, 76px);
+    line-height: 1.08;
+    margin: 23px 0;
+    max-width: 800px;
+}
+.hero h1 span {
+    color: var(--dourado);
+}
+.hero p {
+    font-size: 17px;
+    max-width: 610px;
+    margin-bottom: 30px;
+}
+.botao {
+    display: inline-block;
+    background: var(--dourado);
+    color: var(--marrom);
+    text-decoration: none;
+    padding: 13px 24px;
+    border: 1px solid var(--dourado);
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform .25s, box-shadow .25s, background .25s;
+}
+.botao:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(212, 175, 55, .25);
+    background: #E8C95F;
+}
+.botao-secundario {
+    background: transparent;
+    color: var(--creme);
+    margin-left: 10px;
+}
+section {
+    padding: 85px 8%;
+    scroll-margin-top: 25px;
+}
+.cabecalho-secao {
+    max-width: 760px;
+    margin: 0 auto 42px;
+    text-align: center;
+}
+.cabecalho-secao .etiqueta {
+    color: var(--marrom);
+}
+.cabecalho-secao h2 {
+    font-size: clamp(28px, 4vw, 43px);
+    line-height: 1.2;
+    color: var(--bordo);
+    margin: 12px 0 18px;
+}
+.linha-dourada {
+    height: 3px;
+    width: 65px;
+    background: var(--dourado);
+    margin: 20px auto;
+}
+.introducao {
+    max-width: 900px;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 17px;
+}
+.grade {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 22px;
+}
+.cartao {
+    background: var(--branco);
+    border: 1px solid var(--creme-escuro);
+    border-radius: 10px;
+    padding: 28px;
+    box-shadow: var(--sombra);
+    transition: transform .3s, border-color .3s, box-shadow .3s;
+}
+.cartao:hover {
+    transform: translateY(-6px);
+    border-color: var(--dourado);
+    box-shadow: 0 15px 35px rgba(92, 64, 51, .15);
+}
+.icone {
+    font-size: 35px;
+    margin-bottom: 12px;
+}
+.cartao h3 {
+    color: var(--bordo);
+    margin-bottom: 10px;
+    font-size: 19px;
+}
+.fundo-alternativo {
+    background: var(--creme-escuro);
+}
+.pesquisa {
+    display: flex;
+    gap: 10px;
+    max-width: 700px;
+    margin: 0 auto 25px;
+}
+.campo {
+    width: 100%;
+    min-width: 0;
+    padding: 14px 16px;
+    border: 1px solid #BCA58D;
+    border-radius: 5px;
+    background: var(--branco);
+    color: var(--marrom);
+    outline: none;
+}
+.campo:focus {
+    border-color: var(--bordo);
+    box-shadow: 0 0 0 3px rgba(109, 31, 53, .1);
+}
+.resultado {
+    text-align: center;
+    margin: 18px 0;
+    font-weight: bold;
+}
+.tabela {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--branco);
+    border-radius: 8px;
+    overflow: hidden;
+}
+.tabela th {
+    background: var(--bordo);
+    color: var(--creme);
+    text-align: left;
+}
+.tabela th, .tabela td {
+    padding: 15px;
+    border-bottom: 1px solid var(--creme-escuro);
+}
+.tabela tr:hover td {
+    background: #FFF2D9;
+}
+.tabela-conteiner {
+    overflow-x: auto;
+    border-radius: 8px;
+    box-shadow: var(--sombra);
+}
+.nota {
+    margin-top: 20px;
+    font-size: 13px;
+}
+.detalhes {
+    margin-top: 30px;
+    background: var(--branco);
+    border-radius: 8px;
+    border-left: 4px solid var(--dourado);
+    padding: 20px;
+}
+.detalhes summary {
+    color: var(--bordo);
+    font-weight: bold;
+    cursor: pointer;
+}
+.detalhes p {
+    margin-top: 12px;
+}
+.regra {
+    padding: 20px;
+    background: var(--branco);
+    border-radius: 6px;
+    border-left: 4px solid var(--dourado);
+    margin: 13px 0;
+    transition: transform .2s;
+}
+.regra:hover {
+    transform: translateX(5px);
+}
+.regra strong {
+    color: var(--bordo);
+}
+.desafio {
+    background: var(--branco);
+    max-width: 800px;
+    margin: auto;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: var(--sombra);
+}
+.item-desafio {
+    padding: 13px 0;
+    border-bottom: 1px solid var(--creme-escuro);
+}
+.item-desafio label {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    cursor: pointer;
+}
+.item-desafio input {
+    accent-color: var(--bordo);
+    width: 18px;
+    height: 18px;
+}
+.progresso-fundo {
+    width: 100%;
+    height: 12px;
+    background: var(--creme-escuro);
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 18px 0 10px;
+}
+.progresso {
+    width: 0;
+    height: 100%;
+    background: var(--bordo);
+    transition: width .4s ease;
+}
+.mensagem-progresso {
+    color: var(--bordo);
+    font-weight: bold;
+}
+.mural {
+    max-width: 750px;
+    margin: auto;
+}
+.mural textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+.mural .botao {
+    margin-top: 15px;
+}
+.aviso {
+    font-size: 13px;
+    margin-top: 12px;
+}
+.ideias {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
+    margin-top: 25px;
+}
+.ideia {
+    padding: 20px;
+    background: var(--branco);
+    border-radius: 8px;
+    border-top: 3px solid var(--dourado);
+    overflow-wrap: anywhere;
+}
+.faixa {
+    background: var(--bordo);
+    color: var(--creme);
+    text-align: center;
+    padding: 70px 8%;
+}
+.faixa h2 {
+    color: var(--dourado);
+    font-size: clamp(28px, 4vw, 43px);
+    margin-bottom: 18px;
+}
+footer {
+    background: var(--marrom);
+    color: var(--creme);
+    text-align: center;
+    padding: 35px 8%;
+    border-top: 3px solid var(--dourado);
+}
+footer strong {
+    color: var(--dourado);
+}
+.voltar-topo {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    background: var(--bordo);
+    color: var(--dourado);
+    border: 1px solid var(--dourado);
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 20px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .3s;
+    z-index: 10;
+}
+.voltar-topo.visivel {
+    opacity: 1;
+    pointer-events: auto;
+}
+.revelar {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity .7s ease, transform .7s ease;
+}
+.revelar.visivel {
+    opacity: 1;
+    transform: translateY(0);
+}
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@media (max-width: 650px) {
+    header {
+        justify-content: center;
+        text-align: center;
+    }
+    nav {
+        justify-content: center;
+        gap: 12px;
+    }
+    nav a {
+        font-size: 12px;
+    }
+    .hero {
+        min-height: 530px;
+        padding: 65px 7%;
+    }
+    section {
+        padding: 60px 6%;
+    }
+    .pesquisa {
+        flex-direction: column;
+    }
+    .botao-secundario {
+        margin: 12px 0 0;
+    }
+    .tabela th, .tabela td {
+        padding: 11px;
+    }
+}
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        scroll-behavior: auto !important;
+        animation-duration: .01ms !important;
+        transition-duration: .01ms !important;
+    }
+    .revelar {
+        opacity: 1;
+        transform: none;
+    }
+}
+</style>
 </head>
 <body>
 <header>
-    <div class="logo">🌿 EcoConsciente</div>
-    <nav>
+    <div class="logo">ECO<span>CONSCIENTE</span></div>
+    <nav aria-label="Menu principal">
         <a href="#inicio">Início</a>
-        <a href="#descarte">Descarte correto</a>
-        <a href="#banco">Banco de dados</a>
-        <a href="#desperdicio">Menos desperdício</a>
-        <a href="#contato">Sobre</a>
+        <a href="#projeto">Projeto</a>
+        <a href="#banco">Descarte</a>
+        <a href="#desperdicio">5 R's</a>
+        <a href="#desafio">Desafio</a>
+        <a href="#mural">Participe</a>
     </nav>
 </header>
 <main>
-    <section class="hero" id="inicio">
-        <p class="tag">Pequenas atitudes, grandes mudanças</p>
-        <h1>Sustentabilidade ao Seu Alcance</h1>
-        <h2 style="color: #D4AF37;">
-            Como Descartar Certo e Evitar o Desperdício
-        </h2>
+<section class="hero" id="inicio">
+    <div class="hero-content">
+        <p class="etiqueta">PROJETEC · CTA · Sustentabilidade</p>
+        <h1>Sustentabilidade <span>ao Seu Alcance</span></h1>
+        <p>
+            Tecnologia e consciência ambiental para descartar corretamente,
+            reduzir desperdícios e construir um futuro mais sustentável.
+        </p>
+        <a class="botao" href="#banco">Explorar o projeto ↗</a>
+        <a class="botao botao-secundario" href="#projeto">Conheça nossa ideia</a>
+    </div>
+</section>
+<section id="projeto">
+    <div class="cabecalho-secao revelar">
+        <p class="etiqueta">Nosso propósito</p>
+        <h2>Pequenas atitudes. Grandes mudanças.</h2>
+        <div class="linha-dourada"></div>
         <p>
             Cuidar do meio ambiente não precisa ser complicado.
-            Descubra como descartar resíduos corretamente, aproveitar
-            melhor os recursos e transformar pequenos hábitos em
-            grandes mudanças para o planeta.
+            Criamos este espaço para facilitar o acesso à informação
+            sobre descarte correto e incentivar hábitos conscientes.
         </p>
-        <a href="#banco" class="botao">Encontrar descarte correto</a>
-    </section>
-    <section>
-        <div class="introducao">
-            <div class="titulo">
-                <span>Nosso propósito</span>
-                <h2>Um planeta melhor começa com você</h2>
-            </div>
-            <p>
-                Este espaço foi criado para ser o seu guia prático.
-                Reunimos informações para ajudar você a encontrar o
-                destino correto de cada material e aprender formas
-                simples de reduzir desperdícios no dia a dia.
-            </p>
-        </div>
-        <div class="cartoes">
-            <article class="cartao">
-                <div class="icone">♻️</div>
-                <h3>Descarte consciente</h3>
-                <p>Aprenda a separar os resíduos e descubra o destino adequado para cada material.</p>
-            </article>
-            <article class="cartao">
-                <div class="icone">🌎</div>
-                <h3>Menos desperdício</h3>
-                <p>Adote hábitos que ajudam a economizar água, energia e alimentos.</p>
-            </article>
-            <article class="cartao">
-                <div class="icone">💡</div>
-                <h3>Consumo inteligente</h3>
-                <p>Repense suas escolhas e descubra novas maneiras de reutilizar objetos.</p>
-            </article>
-        </div>
-    </section>
-    <section class="fundo-claro" id="descarte">
-        <div class="titulo">
-            <span>Parte 1</span>
-            <h2>Para onde vai o seu lixo?</h2>
-            <p>Ferramentas e estratégias de descarte</p>
-        </div>
+    </div>
+    <div class="grade">
+        <article class="cartao revelar">
+            <div class="icone">♻️</div>
+            <h3>Descarte correto</h3>
+            <p>Consulte materiais e descubra orientações para dar a eles o destino adequado.</p>
+        </article>
+        <article class="cartao revelar">
+            <div class="icone">🌱</div>
+            <h3>Menos desperdício</h3>
+            <p>Aprenda maneiras práticas de economizar recursos e aproveitar melhor o que consumimos.</p>
+        </article>
+        <article class="cartao revelar">
+            <div class="icone">💡</div>
+            <h3>Tecnologia consciente</h3>
+            <p>Utilize a informação e ferramentas digitais para apoiar escolhas sustentáveis.</p>
+        </article>
+    </div>
+</section>
+<section class="fundo-alternativo" id="banco">
+    <div class="cabecalho-secao revelar">
+        <p class="etiqueta">Consulta inteligente</p>
+        <h2>Banco de Dados de Descarte</h2>
+        <div class="linha-dourada"></div>
         <p>
-            Descartar corretamente evita a contaminação do ambiente,
-            economiza recursos naturais e contribui para o trabalho
-            de catadores e cooperativas de reciclagem.
+            Pesquise um material e consulte sua categoria e as orientações
+            de descarte. Nosso catálogo educativo reúne resíduos comuns
+            e materiais que exigem coleta específica.
         </p>
-        <div class="cartoes">
-            <article class="cartao">
-                <div class="icone">🔋</div>
-                <h3>Pilhas e baterias</h3>
-                <p>Leve a pontos de coleta específicos. Não coloque esses materiais no lixo comum.</p>
-            </article>
-            <article class="cartao">
-                <div class="icone">💡</div>
-                <h3>Lâmpadas</h3>
-                <p>Procure locais que recebam lâmpadas usadas e evite quebrá-las.</p>
-            </article>
-            <article class="cartao">
-                <div class="icone">📱</div>
-                <h3>Eletrônicos</h3>
-                <p>Procure pontos de coleta de lixo eletrônico ou programas de logística reversa.</p>
-            </article>
-            <article class="cartao">
-                <div class="icone">🥫</div>
-                <h3>Embalagens</h3>
-                <p>Separe papel, plástico, vidro e metal. Quando possível, deixe-os limpos e secos.</p>
-            </article>
-        </div>
-        <div style="margin-top: 35px;">
-            <h3>Separação simples na fonte</h3>
-            <div class="regra">
-                <strong>Orgânicos:</strong>
-                restos de alimentos, cascas de frutas e verduras.
-            </div>
-            <div class="regra">
-                <strong>Recicláveis:</strong>
-                papel, plástico, vidro e metal aceitos pela coleta local.
-            </div>
-            <div class="regra">
-                <strong>Rejeitos:</strong>
-                resíduos que não podem ser reciclados ou aproveitados
-                pelos sistemas disponíveis, como muitos itens de higiene.
-            </div>
-        </div>
-    </section>
-    <section id="banco">
-        <div class="titulo">
-            <span>Consulte nosso guia</span>
-            <h2>Banco de Dados de Descarte</h2>
-            <p>Pesquise um material para encontrar orientações sobre o descarte.</p>
-        </div>
-        <div class="pesquisa">
-            <input
-                type="search"
-                id="busca"
-                placeholder="Ex.: pilha, papel, vidro..."
-                aria-label="Pesquisar material"
-            >
-            <button class="botao" onclick="pesquisarMaterial()">
-                Pesquisar
-            </button>
-        </div>
-        <p class="resultado" id="mensagem" aria-live="polite">
-            Digite o nome de um material para pesquisar.
-        </p>
-        <div class="tabela-container">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Material</th>
-                        <th>Categoria</th>
-                        <th>Como descartar</th>
-                    </tr>
-                </thead>
-                <tbody id="listaMateriais">
-                    <tr>
-                        <td>Papel</td>
-                        <td>Reciclável</td>
-                        <td>Separe limpo e seco e encaminhe à coleta seletiva.</td>
-                    </tr>
-                    <tr>
-                        <td>Plástico</td>
-                        <td>Reciclável</td>
-                        <td>Verifique as regras locais e encaminhe à coleta seletiva.</td>
-                    </tr>
-                    <tr>
-                        <td>Vidro</td>
-                        <td>Reciclável</td>
-                        <td>Encaminhe à coleta apropriada e proteja partes quebradas.</td>
-                    </tr>
-                    <tr>
-                        <td>Metal</td>
-                        <td>Reciclável</td>
-                        <td>Separe latas e outros metais aceitos pela coleta local.</td>
-                    </tr>
-                    <tr>
-                        <td>Restos de alimentos</td>
-                        <td>Orgânico</td>
-                        <td>Considere a compostagem ou a coleta de orgânicos disponível.</td>
-                    </tr>
-                    <tr>
-                        <td>Pilhas e baterias</td>
-                        <td>Resíduo especial</td>
-                        <td>Entregue em pontos de coleta específicos.</td>
-                    </tr>
-                    <tr>
-                        <td>Lâmpadas</td>
-                        <td>Resíduo especial</td>
-                        <td>Procure pontos que recebam esse tipo de lâmpada.</td>
-                    </tr>
-                    <tr>
-                        <td>Eletrônicos</td>
-                        <td>Resíduo eletrônico</td>
-                        <td>Procure ecopontos ou programas de logística reversa.</td>
-                    </tr>
-                    <tr>
-                        <td>Óleo de cozinha usado</td>
-                        <td>Resíduo especial</td>
-                        <td>Armazene em uma garrafa fechada e entregue a um ponto de coleta.</td>
-                    </tr>
-                    <tr>
-                        <td>Medicamentos vencidos</td>
-                        <td>Resíduo especial</td>
-                        <td>Consulte uma farmácia ou ponto autorizado que receba medicamentos.</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        <p style="margin-top: 20px; font-size: 14px;">
-            Atenção: as regras de coleta variam conforme a cidade.
-            Consulte o serviço de limpeza urbana local antes de levar
-            materiais a um ponto de descarte.
-        </p>
-    </section>
-    <section class="fundo-claro" id="desperdicio">
-        <div class="titulo">
-            <span>Parte 2</span>
-            <h2>Consumo Inteligente</h2>
-            <p>Como reduzir desperdícios no dia a dia</p>
-        </div>
+    </div>
+    <div class="pesquisa revelar">
+        <input
+            class="campo"
+            type="search"
+            id="busca"
+            placeholder="Pesquise: papel, pilha, vidro..."
+            aria-label="Pesquisar material"
+        >
+        <button class="botao" id="botaoPesquisar" type="button">Pesquisar</button>
+    </div>
+    <p class="resultado" id="mensagemBusca" aria-live="polite">
+        Consulte os materiais disponíveis abaixo.
+    </p>
+    <div class="tabela-conteiner revelar">
+        <table class="tabela">
+            <thead>
+                <tr>
+                    <th>Material</th>
+                    <th>Categoria</th>
+                    <th>Orientação de descarte</th>
+                </tr>
+            </thead>
+            <tbody id="materiais">
+                <tr>
+                    <td>Papel e papelão</td>
+                    <td>Reciclável</td>
+                    <td>Mantenha limpos e secos e encaminhe à coleta seletiva.</td>
+                </tr>
+                <tr>
+                    <td>Plástico</td>
+                    <td>Reciclável</td>
+                    <td>Verifique os materiais aceitos pela coleta local.</td>
+                </tr>
+                <tr>
+                    <td>Vidro</td>
+                    <td>Reciclável</td>
+                    <td>Encaminhe a um ponto apropriado e proteja vidros quebrados.</td>
+                </tr>
+                <tr>
+                    <td>Metal e latas</td>
+                    <td>Reciclável</td>
+                    <td>Separe os itens aceitos pela coleta seletiva local.</td>
+                </tr>
+                <tr>
+                    <td>Restos de alimentos</td>
+                    <td>Orgânico</td>
+                    <td>Considere a compostagem ou a coleta de resíduos orgânicos.</td>
+                </tr>
+                <tr>
+                    <td>Pilhas e baterias</td>
+                    <td>Resíduo especial</td>
+                    <td>Leve a pontos de coleta específicos; não descarte no lixo comum.</td>
+                </tr>
+                <tr>
+                    <td>Lâmpadas</td>
+                    <td>Resíduo especial</td>
+                    <td>Procure pontos que recebam o tipo de lâmpada utilizado.</td>
+                </tr>
+                <tr>
+                    <td>Eletrônicos</td>
+                    <td>Resíduo eletrônico</td>
+                    <td>Consulte ecopontos e programas de logística reversa.</td>
+                </tr>
+                <tr>
+                    <td>Óleo de cozinha usado</td>
+                    <td>Resíduo especial</td>
+                    <td>Armazene em recipiente fechado e entregue a um ponto de coleta.</td>
+                </tr>
+                <tr>
+                    <td>Medicamentos vencidos</td>
+                    <td>Resíduo especial</td>
+                    <td>Procure farmácias ou pontos autorizados que recebam medicamentos.</td>
+                </tr>
+                <tr>
+                    <td>Roupas e tecidos</td>
+                    <td>Reutilização</td>
+                    <td>Considere doação, conserto ou pontos de coleta têxtil.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <p class="nota">
+        Importante: as regras de coleta variam conforme a localidade.
+        Confirme se o ponto escolhido recebe o material antes de se deslocar.
+    </p>
+    <details class="detalhes revelar">
+        <summary>Por que alguns materiais precisam de coleta especial?</summary>
         <p>
-            Evitar que o lixo seja gerado é ainda melhor do que reciclar.
-            Pequenas mudanças na rotina ajudam a conservar os recursos
-            naturais e a reduzir a quantidade de resíduos.
+            Pilhas, baterias, lâmpadas, eletrônicos e medicamentos podem
+            apresentar riscos quando descartados inadequadamente.
+            A coleta específica permite encaminhá-los a sistemas apropriados
+            de tratamento, reciclagem ou destinação final.
         </p>
-        <div class="cartoes">
-            <article class="cartao">
-                <div class="icone">🥕</div>
-                <h3>Combate ao desperdício de alimentos</h3>
-                <p>
-                    Planeje suas compras, armazene os alimentos
-                    corretamente e aproveite partes comestíveis,
-                    como cascas e talos, em receitas adequadas.
-                </p>
-            </article>
-            <article class="cartao">
-                <div class="icone">💧</div>
-                <h3>Economize água</h3>
-                <p>
-                    Feche a torneira quando não estiver usando,
-                    tome banhos conscientes e evite vazamentos.
-                </p>
-            </article>
-            <article class="cartao">
-                <div class="icone">💡</div>
-                <h3>Economize energia</h3>
-                <p>
-                    Apague as luzes ao sair e desligue aparelhos
-                    quando não forem necessários.
-                </p>
-            </article>
-        </div>
-        <div style="margin-top: 40px;">
-            <div class="titulo">
-                <span>Faça sua parte</span>
-                <h2>A Regra dos 5 R's</h2>
-            </div>
-            <div class="regra">
-                <strong>1. Repensar:</strong>
-                Eu realmente preciso comprar isso?
-            </div>
-            <div class="regra">
-                <strong>2. Recusar:</strong>
-                Diga não a produtos descartáveis desnecessários.
-            </div>
-            <div class="regra">
-                <strong>3. Reduzir:</strong>
-                Consuma apenas o necessário e evite excessos.
-            </div>
-            <div class="regra">
-                <strong>4. Reutilizar:</strong>
-                Dê novos usos a embalagens e objetos antigos.
-            </div>
-            <div class="regra">
-                <strong>5. Reciclar:</strong>
-                Encaminhe corretamente os materiais recicláveis.
-            </div>
-        </div>
-    </section>
-    <section>
-        <div class="titulo">
-            <span>Inovação a favor do planeta</span>
-            <h2>A tecnologia também pode ajudar</h2>
-        </div>
-        <div class="introducao">
-            <p>
-                Aplicativos, mapas de pontos de coleta e plataformas
-                digitais podem aproximar os moradores de cooperativas
-                e serviços de reciclagem. Essas ferramentas ajudam
-                a encontrar alternativas para o descarte e a
-                compreender melhor o impacto dos nossos hábitos.
-            </p>
-            <p style="margin-top: 20px;">
-                Antes de se deslocar, confirme se o ponto de coleta
-                recebe o material desejado e confira seu horário
-                de funcionamento.
-            </p>
-        </div>
-    </section>
-    <section class="destaque">
-        <h2>Pequenas atitudes transformam o mundo!</h2>
+    </details>
+</section>
+<section id="desperdicio">
+    <div class="cabecalho-secao revelar">
+        <p class="etiqueta">Consumo inteligente</p>
+        <h2>Conheça a regra dos 5 R's</h2>
+        <div class="linha-dourada"></div>
         <p>
-            Cada escolha consciente é um passo em direção a um
-            futuro mais sustentável. Comece hoje, compartilhe
-            conhecimento e inspire outras pessoas.
+            Reduzir o desperdício começa antes mesmo de o resíduo ser gerado.
+            Conheça cinco atitudes que podem fazer diferença no dia a dia.
         </p>
-        <a href="#banco" class="botao" style="margin-top: 25px;">
-            Consultar materiais
-        </a>
-    </section>
-    <section id="contato">
-        <div class="titulo">
-            <span>Sobre o projeto</span>
-            <h2>Sustentabilidade ao Seu Alcance</h2>
+    </div>
+    <div class="grade">
+        <article class="cartao revelar">
+            <div class="icone">🤔</div>
+            <h3>01. Repensar</h3>
+            <p>Reflita sobre suas escolhas e pergunte se realmente precisa comprar algo.</p>
+        </article>
+        <article class="cartao revelar">
+            <div class="icone">🙅</div>
+            <h3>02. Recusar</h3>
+            <p>Evite produtos descartáveis e embalagens desnecessárias sempre que possível.</p>
+        </article>
+        <article class="cartao revelar">
+            <div class="icone">📉</div>
+            <h3>03. Reduzir</h3>
+            <p>Consuma apenas o necessário e planeje as compras para evitar excessos.</p>
+        </article>
+        <article class="cartao revelar">
+            <div class="icone">🫙</div>
+            <h3>04. Reutilizar</h3>
+            <p>Dê novos usos aos objetos e aproveite os materiais sempre que for seguro.</p>
+        </article>
+        <article class="cartao revelar">
+            <div class="icone">♻️</div>
+            <h3>05. Reciclar</h3>
+            <p>Separe corretamente os resíduos recicláveis e encaminhe-os à coleta adequada.</p>
+        </article>
+        <article class="cartao revelar">
+            <div class="icone">🥕</div>
+            <h3>Evite desperdícios</h3>
+            <p>Planeje refeições, conserve os alimentos corretamente e economize água e energia.</p>
+        </article>
+    </div>
+</section>
+<section class="fundo-alternativo" id="desafio">
+    <div class="cabecalho-secao revelar">
+        <p class="etiqueta">Ação sustentável</p>
+        <h2>Meu desafio ecológico</h2>
+        <div class="linha-dourada"></div>
+        <p>Marque as atitudes que você praticou e acompanhe seu progresso!</p>
+    </div>
+    <div class="desafio revelar">
+        <div class="item-desafio">
+            <label>
+                <input type="checkbox" class="atitude">
+                Economizei água.
+            </label>
         </div>
-        <div class="introducao">
-            <p>
-                Este projeto tem como objetivo conscientizar as pessoas
-                sobre o descarte correto de resíduos e a importância
-                de reduzir o desperdício. Acreditamos que o acesso
-                à informação pode incentivar atitudes mais
-                responsáveis com o meio ambiente.
-            </p>
-            <p style="margin-top: 15px;">
-                <strong>Nosso lema:</strong>
-                cuidar do planeta começa com as escolhas de cada dia.
-            </p>
+        <div class="item-desafio">
+            <label>
+                <input type="checkbox" class="atitude">
+                Evitei desperdiçar alimentos.
+            </label>
         </div>
-    </section>
+        <div class="item-desafio">
+            <label>
+                <input type="checkbox" class="atitude">
+                Separei materiais recicláveis.
+            </label>
+        </div>
+        <div class="item-desafio">
+            <label>
+                <input type="checkbox" class="atitude">
+                Reutilizei algum objeto.
+            </label>
+        </div>
+        <div class="item-desafio">
+            <label>
+                <input type="checkbox" class="atitude">
+                Evitei uma embalagem descartável desnecessária.
+            </label>
+        </div>
+        <div class="progresso-fundo" role="progressbar"
+             aria-label="Progresso do desafio"
+             aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"
+             id="barraFundo">
+            <div class="progresso" id="barraProgresso"></div>
+        </div>
+        <p class="mensagem-progresso" id="textoProgresso" aria-live="polite">
+            Você completou 0 de 5 atitudes.
+        </p>
+    </div>
+</section>
+<section id="mural">
+    <div class="cabecalho-secao revelar">
+        <p class="etiqueta">Sua voz importa</p>
+        <h2>Mural de ideias sustentáveis</h2>
+        <div class="linha-dourada"></div>
+        <p>
+            Que atitude sustentável você gostaria de compartilhar?
+            Escreva uma ideia e inspire outras pessoas a cuidar do planeta.
+        </p>
+    </div>
+    <div class="mural revelar">
+        <label for="ideia" class="etiqueta">Compartilhe sua ideia</label>
+        <textarea
+            class="campo"
+            id="ideia"
+            maxlength="250"
+            placeholder="Ex.: Podemos criar uma campanha para reduzir o desperdício de alimentos..."
+            style="margin-top: 10px;"
+        ></textarea>
+        <button class="botao" id="botaoIdeia" type="button">
+            Adicionar ideia
+        </button>
+        <p class="aviso">
+            Demonstração local: as ideias adicionadas aparecem somente
+            neste navegador e não são enviadas para outros visitantes.
+        </p>
+        <div class="ideias" id="listaIdeias" aria-live="polite"></div>
+    </div>
+</section>
+<section class="fundo-alternativo" id="sobre">
+    <div class="cabecalho-secao revelar">
+        <p class="etiqueta">Sobre o projeto</p>
+        <h2>Tecnologia a favor do planeta</h2>
+        <div class="linha-dourada"></div>
+        <p>
+            O Sustentabilidade ao Seu Alcance é um projeto educativo
+            desenvolvido por alunas do CTA para a PROJETEC.
+            A proposta é utilizar a tecnologia como ferramenta de
+            conscientização ambiental, oferecendo informações sobre
+            descarte de resíduos e redução de desperdícios.
+        </p>
+    </div>
+    <div class="grade">
+        <article class="cartao revelar">
+            <h3>Nosso objetivo</h3>
+            <p>Facilitar o acesso à informação e incentivar hábitos mais responsáveis.</p>
+        </article>
+        <article class="cartao revelar">
+            <h3>Nossa proposta</h3>
+            <p>Reunir consulta de materiais, orientações educativas e ferramentas interativas.</p>
+        </article>
+        <article class="cartao revelar">
+            <h3>Nosso compromisso</h3>
+            <p>Promover a conscientização e valorizar escolhas que contribuam para um futuro sustentável.</p>
+        </article>
+    </div>
+</section>
+<section class="faixa">
+    <p class="etiqueta">O futuro começa agora</p>
+    <h2>Faça parte da mudança.</h2>
+    <p>Um planeta melhor começa nas escolhas que fazemos todos os dias.</p>
+    <a href="#banco" class="botao" style="margin-top: 25px;">
+        Consultar descarte correto
+    </a>
+</section>
 </main>
 <footer>
-    <p><strong>🌿 EcoConsciente</strong></p>
+    <p><strong>PROJETEC · CTA</strong></p>
     <p>Sustentabilidade ao Seu Alcance</p>
-    <p>Pequenas atitudes, grandes mudanças.</p>
-    <p style="margin-top: 15px; font-size: 13px;">
+    <p>Desenvolvido por alunas do CTA.</p>
+    <p style="margin-top: 15px; font-size: 12px;">
         Projeto educativo de conscientização ambiental.
     </p>
 </footer>
+<button class="voltar-topo" id="voltarTopo" aria-label="Voltar ao início">
+    ↑
+</button>
 <script>
-    function pesquisarMaterial() {
-        const campo = document.getElementById("busca");
-        const termo = campo.value.trim().toLocaleLowerCase("pt-BR");
-        const linhas = document.querySelectorAll("#listaMateriais tr");
-        const mensagem = document.getElementById("mensagem");
-        let encontrados = 0;
-        if (termo === "") {
-            mensagem.textContent = "Digite o nome de um material para pesquisar.";
-            linhas.forEach(function(linha) {
-                linha.style.display = "";
-            });
-            return;
-        }
-        linhas.forEach(function(linha) {
-            const conteudo = linha.textContent.toLocaleLowerCase("pt-BR");
-            const corresponde = conteudo.includes(termo);
-            linha.style.display = corresponde ? "" : "none";
-            if (corresponde) {
-                encontrados++;
+/* Pesquisa de materiais */
+const busca = document.getElementById("busca");
+const linhas = Array.from(document.querySelectorAll("#materiais tr"));
+const mensagemBusca = document.getElementById("mensagemBusca");
+function pesquisarMaterial() {
+    const termo = busca.value.trim().toLocaleLowerCase("pt-BR");
+    let total = 0;
+    linhas.forEach(function(linha) {
+        const corresponde = linha.textContent
+            .toLocaleLowerCase("pt-BR")
+            .includes(termo);
+        linha.hidden = !corresponde;
+        if (corresponde) total++;
+    });
+    if (termo === "") {
+        linhas.forEach(linha => linha.hidden = false);
+        mensagemBusca.textContent = "Exibindo todos os materiais cadastrados.";
+    } else if (total === 0) {
+        mensagemBusca.textContent =
+            "Nenhum material encontrado. Tente outro termo ou consulte a coleta local.";
+    } else {
+        mensagemBusca.textContent =
+            total + (total === 1
+                ? " material encontrado."
+                : " materiais encontrados.");
+    }
+}
+document.getElementById("botaoPesquisar")
+    .addEventListener("click", pesquisarMaterial);
+busca.addEventListener("keydown", function(event) {
+    if (event.key === "Enter") pesquisarMaterial();
+});
+/* Desafio sustentável */
+const atitudes = document.querySelectorAll(".atitude");
+const barraProgresso = document.getElementById("barraProgresso");
+const barraFundo = document.getElementById("barraFundo");
+const textoProgresso = document.getElementById("textoProgresso");
+function atualizarDesafio() {
+    const marcadas = document.querySelectorAll(".atitude:checked").length;
+    const percentual = (marcadas / atitudes.length) * 100;
+    barraProgresso.style.width = percentual + "%";
+    barraFundo.setAttribute("aria-valuenow", percentual);
+    textoProgresso.textContent =
+        "Você completou " + marcadas + " de " + atitudes.length + " atitudes.";
+    if (marcadas === atitudes.length) {
+        textoProgresso.textContent =
+            "Parabéns! Você completou o desafio sustentável!";
+    }
+    try {
+        localStorage.setItem("ecoAtitudes", JSON.stringify(
+            Array.from(atitudes).map(item => item.checked)
+        ));
+    } catch (e) {
+        /* O desafio continua funcionando sem armazenamento local. */
+    }
+}
+try {
+    const salvas = JSON.parse(localStorage.getItem("ecoAtitudes") || "null");
+    if (Array.isArray(salvas)) {
+        atitudes.forEach(function(item, indice) {
+            item.checked = Boolean(salvas[indice]);
+        });
+    }
+} catch (e) {
+    /* O site continua funcionando se o armazenamento estiver indisponível. */
+}
+atitudes.forEach(item => item.addEventListener("change", atualizarDesafio));
+atualizarDesafio();
+/* Mural de ideias: demonstração local */
+const campoIdeia = document.getElementById("ideia");
+const listaIdeias = document.getElementById("listaIdeias");
+const botaoIdeia = document.getElementById("botaoIdeia");
+function adicionarIdeia(texto) {
+    const cartao = document.createElement("article");
+    cartao.className = "ideia";
+    const titulo = document.createElement("h3");
+    titulo.textContent = "Ideia sustentável";
+    const paragrafo = document.createElement("p");
+    paragrafo.textContent = texto;
+    cartao.append(titulo, paragrafo);
+    listaIdeias.prepend(cartao);
+}
+botaoIdeia.addEventListener("click", function() {
+    const texto = campoIdeia.value.trim();
+    if (!texto) {
+        campoIdeia.focus();
+        return;
+    }
+    adicionarIdeia(texto);
+    campoIdeia.value = "";
+});
+/* Animações ao rolar a página */
+const elementos = document.querySelectorAll(".revelar");
+if ("IntersectionObserver" in window) {
+    const observador = new IntersectionObserver(function(entradas, obs) {
+        entradas.forEach(function(entrada) {
+            if (entrada.isIntersecting) {
+                entrada.target.classList.add("visivel");
+                obs.unobserve(entrada.target);
             }
         });
-        if (encontrados > 0) {
-            mensagem.textContent =
-                encontrados === 1
-                ? "Encontramos 1 resultado para sua pesquisa."
-                : "Encontramos " + encontrados + " resultados para sua pesquisa.";
-        } else {
-            mensagem.textContent =
-                "Nenhum material encontrado. Tente outro nome, como papel, vidro ou pilha.";
-        }
-    }
-    document.getElementById("busca").addEventListener("keydown", function(event) {
-        if (event.key === "Enter") {
-            pesquisarMaterial();
-        }
-    });
+    }, { threshold: 0.12 });
+    elementos.forEach(elemento => observador.observe(elemento));
+} else {
+    elementos.forEach(elemento => elemento.classList.add("visivel"));
+}
+/* Botão de voltar ao topo */
+const voltarTopo = document.getElementById("voltarTopo");
+window.addEventListener("scroll", function() {
+    voltarTopo.classList.toggle("visivel", window.scrollY > 400);
+});
+voltarTopo.addEventListener("click", function() {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+});
 </script>
 </body>
 </html>
