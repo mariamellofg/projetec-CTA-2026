@@ -885,5 +885,18 @@ voltarTopo.addEventListener("click", function() {
     window.scrollTo({ top: 0, behavior: "smooth" });
 });
 </script>
+    
+<style>
+.card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  cursor: pointer;
+}
+
+.card:active {
+  transform: scale(1.04);
+  box-shadow: 0 8px 20px rgba(92, 64, 51, 0.22);
+}
+</style>
+
 </body>
 </html>
