@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -5,6 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Sustentabilidade ao Seu Alcance | PROJETEC</title>
 <meta name="description" content="Projeto educativo sobre sustentabilidade, reciclagem, descarte correto e redução de desperdícios.">
+
 <style>
 :root {
     --bordo: #4B5320;
@@ -161,8 +163,9 @@ section {
     margin-bottom: 10px;
     font-size: 19px;
 }
+.cartao p + p { margin-top: 10px; }
 .fundo-alternativo { background: var(--creme-escuro); }
-/* BANCO DE DADOS: SEM TEXTO EXPLICATIVO E SEM PESQUISA */
+
 #banco .cabecalho-secao {
     margin-bottom: 42px;
     text-align: center;
@@ -307,6 +310,7 @@ footer strong { color: var(--dourado); }
 }
 </style>
 </head>
+
 <body>
 <header>
     <div class="logo">ECO<span>CONSCIENTE</span></div>
@@ -314,10 +318,12 @@ footer strong { color: var(--dourado); }
         <a href="#inicio">Início</a>
         <a href="#projeto">Projeto</a>
         <a href="#banco">Descarte</a>
+        <a href="#guia-saude">Guia de descarte</a>
         <a href="#desperdicio">5 R's</a>
         <a href="#sobre">Sobre</a>
     </nav>
 </header>
+
 <main>
 <section class="hero" id="inicio">
     <div class="hero-content">
@@ -331,6 +337,7 @@ footer strong { color: var(--dourado); }
         <a class="botao botao-secundario" href="#projeto">Conheça nossa ideia</a>
     </div>
 </section>
+
 <section id="projeto">
     <div class="cabecalho-secao revelar">
         <p class="etiqueta">Nosso propósito</p>
@@ -342,6 +349,7 @@ footer strong { color: var(--dourado); }
             sobre descarte correto e incentivar hábitos conscientes.
         </p>
     </div>
+
     <div class="grade">
         <article class="cartao revelar">
             <div class="icone">♻️</div>
@@ -360,12 +368,14 @@ footer strong { color: var(--dourado); }
         </article>
     </div>
 </section>
+
 <section class="fundo-alternativo" id="banco">
     <div class="cabecalho-secao revelar">
         <p class="etiqueta">Consulta inteligente</p>
         <h2>Banco de Dados de Descarte</h2>
         <div class="linha-dourada"></div>
     </div>
+
     <div class="tabela-conteiner revelar">
         <table class="tabela">
             <thead>
@@ -431,13 +441,35 @@ footer strong { color: var(--dourado); }
                     <td>Reutilização</td>
                     <td>Considere doação, conserto ou pontos de coleta têxtil.</td>
                 </tr>
+                <tr>
+                    <td>Cabos e fios</td>
+                    <td>Lixo eletrônico</td>
+                    <td>Entregue em postos de reciclagem ou lojas que recebam eletrônicos.</td>
+                </tr>
+                <tr>
+                    <td>Computadores e monitores</td>
+                    <td>Lixo eletrônico</td>
+                    <td>Doe se funcionarem ou procure ecopontos e pontos de coleta autorizados. Apague seus dados pessoais antes do descarte.</td>
+                </tr>
+                <tr>
+                    <td>Agulhas e seringas</td>
+                    <td>Resíduo de saúde</td>
+                    <td>Não descarte soltas. Use recipiente rígido e resistente e consulte a UBS sobre a entrega segura.</td>
+                </tr>
+                <tr>
+                    <td>Máscaras, luvas e curativos domésticos</td>
+                    <td>Resíduo de saúde</td>
+                    <td>Resíduos domésticos comuns, sem contaminação especial, devem ser embalados em saco bem fechado, conforme as regras locais.</td>
+                </tr>
             </tbody>
         </table>
     </div>
+
     <p class="nota">
         Importante: as regras de coleta variam conforme a localidade.
         Confirme se o ponto escolhido recebe o material antes de se deslocar.
     </p>
+
     <details class="detalhes revelar">
         <summary>Por que alguns materiais precisam de coleta especial?</summary>
         <p>
@@ -448,6 +480,83 @@ footer strong { color: var(--dourado); }
         </p>
     </details>
 </section>
+
+<!-- NOVA SEÇÃO: GUIA DE DESCARTE DE TECNOLOGIA E SAÚDE -->
+<section id="guia-saude">
+    <div class="cabecalho-secao revelar">
+        <p class="etiqueta">Descarte responsável</p>
+        <h2>Guia de Descarte: Tecnologia e Saúde</h2>
+        <div class="linha-dourada"></div>
+        <p>
+            O descarte incorreto de eletrônicos e materiais de saúde pode
+            prejudicar o meio ambiente e a saúde pública. Saiba como
+            encaminhar cada material corretamente.
+        </p>
+    </div>
+
+    <div class="grade">
+        <article class="cartao revelar">
+            <div class="icone">💻</div>
+            <h3>Lixo eletrônico</h3>
+            <p>
+                <strong>Pilhas e baterias:</strong> entregue em pontos de
+                coleta, como os disponíveis em algumas lojas e supermercados.
+            </p>
+            <p>
+                <strong>Cabos e fios:</strong> procure postos de reciclagem
+                de eletrônicos ou lojas que recebam esses materiais.
+            </p>
+            <p>
+                <strong>Computadores e monitores:</strong> doe se estiverem
+                funcionando ou procure ecopontos e pontos de coleta dos fabricantes.
+                Apague seus dados pessoais antes do descarte.
+            </p>
+        </article>
+
+        <article class="cartao revelar">
+            <div class="icone">💊</div>
+            <h3>Medicamentos</h3>
+            <p>
+                Nunca jogue remédios na pia ou no vaso sanitário.
+                Medicamentos vencidos ou sem uso devem ser entregues em
+                farmácias e drogarias com pontos de coleta.
+            </p>
+        </article>
+
+        <article class="cartao revelar">
+            <div class="icone">🩺</div>
+            <h3>Agulhas e seringas</h3>
+            <p>
+                Nunca descarte esses materiais soltos no lixo comum.
+                Mantenha-os em recipiente rígido, resistente e fechado,
+                sem reencapar as agulhas, e consulte a UBS sobre o local
+                correto para entrega.
+            </p>
+        </article>
+
+        <article class="cartao revelar">
+            <div class="icone">🧤</div>
+            <h3>Máscaras, luvas e curativos</h3>
+            <p>
+                Resíduos domésticos comuns, sem contaminação especial,
+                devem ser colocados em saco bem fechado e descartados
+                conforme as regras locais. Materiais contaminados ou
+                provenientes de cuidados de saúde podem exigir coleta específica.
+            </p>
+        </article>
+    </div>
+
+    <details class="detalhes revelar">
+        <summary>Por que não devemos descartar esses materiais de qualquer jeito?</summary>
+        <p>
+            Alguns eletrônicos contêm substâncias que podem contaminar
+            o solo e a água. Já os materiais de saúde podem apresentar
+            riscos de acidentes e contaminação. O descarte adequado ajuda
+            a proteger os trabalhadores da coleta, a população e a natureza.
+        </p>
+    </details>
+</section>
+
 <section id="desperdicio">
     <div class="cabecalho-secao revelar">
         <p class="etiqueta">Consumo inteligente</p>
@@ -458,6 +567,7 @@ footer strong { color: var(--dourado); }
             Conheça cinco atitudes que podem fazer diferença no dia a dia.
         </p>
     </div>
+
     <div class="grade">
         <article class="cartao revelar">
             <div class="icone">🤔</div>
@@ -491,6 +601,7 @@ footer strong { color: var(--dourado); }
         </article>
     </div>
 </section>
+
 <section class="fundo-alternativo" id="sobre">
     <div class="cabecalho-secao revelar">
         <p class="etiqueta">Sobre o projeto</p>
@@ -504,6 +615,7 @@ footer strong { color: var(--dourado); }
             descarte de resíduos e redução de desperdícios.
         </p>
     </div>
+
     <div class="grade">
         <article class="cartao revelar">
             <h3>Nosso objetivo</h3>
@@ -519,6 +631,7 @@ footer strong { color: var(--dourado); }
         </article>
     </div>
 </section>
+
 <section class="faixa">
     <p class="etiqueta">O futuro começa agora</p>
     <h2>Faça parte da mudança.</h2>
@@ -528,6 +641,7 @@ footer strong { color: var(--dourado); }
     </a>
 </section>
 </main>
+
 <footer>
     <p><strong>PROJETEC · CTA</strong></p>
     <p>Sustentabilidade ao Seu Alcance</p>
@@ -536,11 +650,14 @@ footer strong { color: var(--dourado); }
         Projeto educativo de conscientização ambiental.
     </p>
 </footer>
+
 <button class="voltar-topo" id="voltarTopo" aria-label="Voltar ao início">
     ↑
 </button>
+
 <script>
 const elementos = document.querySelectorAll(".revelar");
+
 if ("IntersectionObserver" in window) {
     const observador = new IntersectionObserver(function(entradas, obs) {
         entradas.forEach(function(entrada) {
@@ -550,14 +667,18 @@ if ("IntersectionObserver" in window) {
             }
         });
     }, { threshold: 0.12 });
+
     elementos.forEach(elemento => observador.observe(elemento));
 } else {
     elementos.forEach(elemento => elemento.classList.add("visivel"));
 }
+
 const voltarTopo = document.getElementById("voltarTopo");
+
 window.addEventListener("scroll", function() {
     voltarTopo.classList.toggle("visivel", window.scrollY > 400);
 });
+
 voltarTopo.addEventListener("click", function() {
     window.scrollTo({ top: 0, behavior: "smooth" });
 });
