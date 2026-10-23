@@ -162,47 +162,10 @@ section {
     font-size: 19px;
 }
 .fundo-alternativo { background: var(--creme-escuro); }
-/* NOVA PESQUISA: CAMPO EM CIMA E BOTÃO EMBAIXO */
-.pesquisa {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    width: 100%;
-    max-width: 700px;
-    margin: 0 auto 25px;
-}
-.campo {
-    width: 100%;
-    min-width: 0;
-    min-height: 60px;
-    padding: 16px 20px;
-    font-size: 18px;
-    border: 1px solid #A8AA8A;
-    border-radius: 8px;
-    background: var(--branco);
-    color: var(--marrom);
-}
-.campo:focus {
-    outline: 2px solid var(--bordo);
-    outline-offset: 2px;
-}
-.pesquisa .botao {
-    width: 100%;
-    min-height: 60px;
-    padding: 16px 20px;
-    font-size: 18px;
-}
+/* BANCO DE DADOS: SEM TEXTO EXPLICATIVO E SEM PESQUISA */
 #banco .cabecalho-secao {
-    width: 100%;
-    max-width: 760px;
-    margin: 0 auto 35px;
+    margin-bottom: 42px;
     text-align: center;
-}
-#banco .cabecalho-secao > p:last-child {
-    max-width: 650px;
-    margin: 0 auto;
-    line-height: 1.6;
-    overflow-wrap: break-word;
 }
 .resultado {
     text-align: center;
@@ -211,6 +174,7 @@ section {
 }
 .tabela {
     width: 100%;
+    min-width: 600px;
     border-collapse: collapse;
     background: var(--branco);
 }
@@ -229,9 +193,6 @@ section {
     overflow-x: auto;
     border-radius: 8px;
     box-shadow: var(--sombra);
-}
-.tabela {
-    min-width: 600px;
 }
 .nota {
     margin-top: 20px;
@@ -330,19 +291,6 @@ footer strong { color: var(--dourado); }
     #banco .cabecalho-secao {
         margin-bottom: 30px;
     }
-    #banco .cabecalho-secao > p:last-child {
-        font-size: 17px;
-        padding: 0 2px;
-    }
-    .pesquisa {
-        flex-direction: column;
-        gap: 14px;
-    }
-    .pesquisa .campo,
-    .pesquisa .botao {
-        width: 100%;
-        min-height: 60px;
-    }
     .botao-secundario { margin: 12px 0 0; }
     .tabela th, .tabela td { padding: 11px; }
 }
@@ -417,21 +365,7 @@ footer strong { color: var(--dourado); }
         <p class="etiqueta">Consulta inteligente</p>
         <h2>Banco de Dados de Descarte</h2>
         <div class="linha-dourada"></div>
-        <p>
-            Pesquise um material e consulte sua categoria e as orientações
-            de descarte. O catálogo reúne resíduos comuns e materiais
-            que exigem coleta específica.
-        </p>
     </div>
-    <div class="pesquisa revelar">
-        <input class="campo" type="search" id="busca"
-               placeholder="Pesquise: papel, pilha, vidro..."
-               aria-label="Pesquisar material">
-        <button class="botao" id="botaoPesquisar" type="button">Pesquisar</button>
-    </div>
-    <p class="resultado" id="mensagemBusca" aria-live="polite">
-        Consulte os materiais disponíveis abaixo.
-    </p>
     <div class="tabela-conteiner revelar">
         <table class="tabela">
             <thead>
@@ -606,37 +540,6 @@ footer strong { color: var(--dourado); }
     ↑
 </button>
 <script>
-const busca = document.getElementById("busca");
-const linhas = Array.from(document.querySelectorAll("#materiais tr"));
-const mensagemBusca = document.getElementById("mensagemBusca");
-function pesquisarMaterial() {
-    const termo = busca.value.trim().toLocaleLowerCase("pt-BR");
-    let total = 0;
-    linhas.forEach(function(linha) {
-        const corresponde = linha.textContent
-            .toLocaleLowerCase("pt-BR")
-            .includes(termo);
-        linha.hidden = !corresponde;
-        if (corresponde) total++;
-    });
-    if (termo === "") {
-        linhas.forEach(linha => linha.hidden = false);
-        mensagemBusca.textContent = "Exibindo todos os materiais cadastrados.";
-    } else if (total === 0) {
-        mensagemBusca.textContent =
-            "Nenhum material encontrado. Tente outro termo ou consulte a coleta local.";
-    } else {
-        mensagemBusca.textContent =
-            total + (total === 1
-                ? " material encontrado."
-                : " materiais encontrados.");
-    }
-}
-document.getElementById("botaoPesquisar")
-    .addEventListener("click", pesquisarMaterial);
-busca.addEventListener("keydown", function(event) {
-    if (event.key === "Enter") pesquisarMaterial();
-});
 const elementos = document.querySelectorAll(".revelar");
 if ("IntersectionObserver" in window) {
     const observador = new IntersectionObserver(function(entradas, obs) {
