@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Sustentabilidade ao Seu Alcance | PROJETEC</title>
 <meta name="description" content="Projeto educativo sobre sustentabilidade, reciclagem, descarte correto e redução de desperdícios.">
-
 <style>
 :root {
     --bordo: #4B5320;
@@ -16,24 +15,20 @@
     --branco: #FFFFFF;
     --sombra: 0 12px 35px rgba(48,53,29,.10);
 }
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
 }
-
 body {
     font-family: Arial, Helvetica, sans-serif;
     background: var(--creme);
     color: var(--marrom);
     line-height: 1.7;
 }
-
 a { color: inherit; }
 button, input { font: inherit; }
-
 header {
     background: var(--bordo);
     color: var(--creme);
@@ -45,29 +40,23 @@ header {
     flex-wrap: wrap;
     border-bottom: 3px solid var(--dourado);
 }
-
 .logo {
     font-size: 19px;
     font-weight: 800;
     letter-spacing: 1px;
 }
-
 .logo span { color: var(--dourado); }
-
 nav {
     display: flex;
     flex-wrap: wrap;
     gap: 18px;
 }
-
 nav a {
     text-decoration: none;
     font-size: 13px;
     transition: color .25s;
 }
-
 nav a:hover { color: var(--dourado); }
-
 .hero {
     min-height: 590px;
     padding: 95px 8%;
@@ -79,12 +68,10 @@ nav a:hover { color: var(--dourado); }
         center/cover;
     color: var(--creme);
 }
-
 .hero-content {
     max-width: 800px;
     animation: aparecer 1s ease both;
 }
-
 .etiqueta {
     color: var(--dourado);
     font-size: 12px;
@@ -92,21 +79,17 @@ nav a:hover { color: var(--dourado); }
     text-transform: uppercase;
     font-weight: bold;
 }
-
 .hero h1 {
     font-size: clamp(39px,7vw,76px);
     line-height: 1.08;
     margin: 23px 0;
 }
-
 .hero h1 span { color: var(--dourado); }
-
 .hero p {
     font-size: 17px;
     max-width: 610px;
     margin-bottom: 30px;
 }
-
 .botao {
     display: inline-block;
     background: var(--dourado);
@@ -119,53 +102,43 @@ nav a:hover { color: var(--dourado); }
     cursor: pointer;
     transition: transform .25s, box-shadow .25s;
 }
-
 .botao:hover {
     transform: translateY(-3px);
     box-shadow: 0 8px 20px rgba(212,175,55,.25);
 }
-
 .botao-secundario {
     background: transparent;
     color: var(--creme);
     margin-left: 10px;
 }
-
 section {
     padding: 85px 8%;
     scroll-margin-top: 25px;
 }
-
 .cabecalho-secao {
     max-width: 760px;
     margin: 0 auto 42px;
     text-align: center;
 }
-
 .cabecalho-secao .etiqueta { color: var(--marrom); }
-
 .cabecalho-secao h2 {
     font-size: clamp(28px,4vw,43px);
     line-height: 1.2;
     color: var(--bordo);
     margin: 12px 0 18px;
 }
-
 .linha-dourada {
     height: 3px;
     width: 65px;
     background: var(--dourado);
     margin: 20px auto;
 }
-
 .cabecalho-secao > p:last-child { font-size: 17px; }
-
 .grade {
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
     gap: 22px;
 }
-
 .cartao {
     background: var(--branco);
     border: 1px solid var(--creme-escuro);
@@ -174,83 +147,96 @@ section {
     box-shadow: var(--sombra);
     transition: transform .3s, border-color .3s, box-shadow .3s;
 }
-
 .cartao:hover {
     transform: translateY(-6px);
     border-color: var(--dourado);
     box-shadow: 0 15px 35px rgba(48,53,29,.15);
 }
-
 .icone {
     font-size: 35px;
     margin-bottom: 12px;
 }
-
 .cartao h3 {
     color: var(--bordo);
     margin-bottom: 10px;
     font-size: 19px;
 }
-
 .fundo-alternativo { background: var(--creme-escuro); }
-
+/* NOVA PESQUISA: CAMPO EM CIMA E BOTÃO EMBAIXO */
 .pesquisa {
     display: flex;
-    gap: 10px;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
     max-width: 700px;
     margin: 0 auto 25px;
 }
-
 .campo {
     width: 100%;
     min-width: 0;
-    padding: 14px 16px;
+    min-height: 60px;
+    padding: 16px 20px;
+    font-size: 18px;
     border: 1px solid #A8AA8A;
-    border-radius: 5px;
+    border-radius: 8px;
     background: var(--branco);
     color: var(--marrom);
 }
-
 .campo:focus {
     outline: 2px solid var(--bordo);
+    outline-offset: 2px;
 }
-
+.pesquisa .botao {
+    width: 100%;
+    min-height: 60px;
+    padding: 16px 20px;
+    font-size: 18px;
+}
+#banco .cabecalho-secao {
+    width: 100%;
+    max-width: 760px;
+    margin: 0 auto 35px;
+    text-align: center;
+}
+#banco .cabecalho-secao > p:last-child {
+    max-width: 650px;
+    margin: 0 auto;
+    line-height: 1.6;
+    overflow-wrap: break-word;
+}
 .resultado {
     text-align: center;
     margin: 18px 0;
     font-weight: bold;
 }
-
 .tabela {
     width: 100%;
     border-collapse: collapse;
     background: var(--branco);
 }
-
 .tabela th {
     background: var(--bordo);
     color: var(--creme);
     text-align: left;
 }
-
 .tabela th, .tabela td {
     padding: 15px;
     border-bottom: 1px solid var(--creme-escuro);
 }
-
 .tabela tr:hover td { background: #F5EBCB; }
-
 .tabela-conteiner {
+    width: 100%;
     overflow-x: auto;
     border-radius: 8px;
     box-shadow: var(--sombra);
 }
-
+.tabela {
+    min-width: 600px;
+}
 .nota {
     margin-top: 20px;
     font-size: 13px;
 }
-
 .detalhes {
     margin-top: 30px;
     background: var(--branco);
@@ -258,28 +244,23 @@ section {
     border-left: 4px solid var(--dourado);
     padding: 20px;
 }
-
 .detalhes summary {
     color: var(--bordo);
     font-weight: bold;
     cursor: pointer;
 }
-
 .detalhes p { margin-top: 12px; }
-
 .faixa {
     background: var(--bordo);
     color: var(--creme);
     text-align: center;
     padding: 70px 8%;
 }
-
 .faixa h2 {
     color: var(--dourado);
     font-size: clamp(28px,4vw,43px);
     margin-bottom: 18px;
 }
-
 footer {
     background: var(--marrom);
     color: var(--creme);
@@ -287,9 +268,7 @@ footer {
     padding: 35px 8%;
     border-top: 3px solid var(--dourado);
 }
-
 footer strong { color: var(--dourado); }
-
 .voltar-topo {
     position: fixed;
     right: 20px;
@@ -307,23 +286,19 @@ footer strong { color: var(--dourado); }
     transition: opacity .3s;
     z-index: 10;
 }
-
 .voltar-topo.visivel {
     opacity: 1;
     pointer-events: auto;
 }
-
 .revelar {
     opacity: 0;
     transform: translateY(24px);
     transition: opacity .7s ease, transform .7s ease;
 }
-
 .revelar.visivel {
     opacity: 1;
     transform: translateY(0);
 }
-
 @keyframes aparecer {
     from {
         opacity: 0;
@@ -334,41 +309,49 @@ footer strong { color: var(--dourado); }
         transform: translateY(0);
     }
 }
-
 @media (max-width: 650px) {
     header {
         justify-content: center;
         text-align: center;
     }
-
     nav {
         justify-content: center;
         gap: 12px;
     }
-
     nav a { font-size: 12px; }
-
     .hero {
         min-height: 530px;
         padding: 65px 7%;
     }
-
     section { padding: 60px 6%; }
-
-    .pesquisa { flex-direction: column; }
-
+    #banco {
+        padding: 55px 6%;
+    }
+    #banco .cabecalho-secao {
+        margin-bottom: 30px;
+    }
+    #banco .cabecalho-secao > p:last-child {
+        font-size: 17px;
+        padding: 0 2px;
+    }
+    .pesquisa {
+        flex-direction: column;
+        gap: 14px;
+    }
+    .pesquisa .campo,
+    .pesquisa .botao {
+        width: 100%;
+        min-height: 60px;
+    }
     .botao-secundario { margin: 12px 0 0; }
-
     .tabela th, .tabela td { padding: 11px; }
 }
-
 @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after {
         scroll-behavior: auto !important;
         animation-duration: .01ms !important;
         transition-duration: .01ms !important;
     }
-
     .revelar {
         opacity: 1;
         transform: none;
@@ -376,7 +359,6 @@ footer strong { color: var(--dourado); }
 }
 </style>
 </head>
-
 <body>
 <header>
     <div class="logo">ECO<span>CONSCIENTE</span></div>
@@ -388,7 +370,6 @@ footer strong { color: var(--dourado); }
         <a href="#sobre">Sobre</a>
     </nav>
 </header>
-
 <main>
 <section class="hero" id="inicio">
     <div class="hero-content">
@@ -402,7 +383,6 @@ footer strong { color: var(--dourado); }
         <a class="botao botao-secundario" href="#projeto">Conheça nossa ideia</a>
     </div>
 </section>
-
 <section id="projeto">
     <div class="cabecalho-secao revelar">
         <p class="etiqueta">Nosso propósito</p>
@@ -414,20 +394,17 @@ footer strong { color: var(--dourado); }
             sobre descarte correto e incentivar hábitos conscientes.
         </p>
     </div>
-
     <div class="grade">
         <article class="cartao revelar">
             <div class="icone">♻️</div>
             <h3>Descarte correto</h3>
             <p>Consulte materiais e descubra orientações para dar a eles o destino adequado.</p>
         </article>
-
         <article class="cartao revelar">
             <div class="icone">🌱</div>
             <h3>Menos desperdício</h3>
             <p>Aprenda maneiras práticas de economizar recursos e aproveitar melhor o que consumimos.</p>
         </article>
-
         <article class="cartao revelar">
             <div class="icone">💡</div>
             <h3>Tecnologia consciente</h3>
@@ -435,7 +412,6 @@ footer strong { color: var(--dourado); }
         </article>
     </div>
 </section>
-
 <section class="fundo-alternativo" id="banco">
     <div class="cabecalho-secao revelar">
         <p class="etiqueta">Consulta inteligente</p>
@@ -447,18 +423,15 @@ footer strong { color: var(--dourado); }
             que exigem coleta específica.
         </p>
     </div>
-
     <div class="pesquisa revelar">
         <input class="campo" type="search" id="busca"
                placeholder="Pesquise: papel, pilha, vidro..."
                aria-label="Pesquisar material">
         <button class="botao" id="botaoPesquisar" type="button">Pesquisar</button>
     </div>
-
     <p class="resultado" id="mensagemBusca" aria-live="polite">
         Consulte os materiais disponíveis abaixo.
     </p>
-
     <div class="tabela-conteiner revelar">
         <table class="tabela">
             <thead>
@@ -527,12 +500,10 @@ footer strong { color: var(--dourado); }
             </tbody>
         </table>
     </div>
-
     <p class="nota">
         Importante: as regras de coleta variam conforme a localidade.
         Confirme se o ponto escolhido recebe o material antes de se deslocar.
     </p>
-
     <details class="detalhes revelar">
         <summary>Por que alguns materiais precisam de coleta especial?</summary>
         <p>
@@ -543,7 +514,6 @@ footer strong { color: var(--dourado); }
         </p>
     </details>
 </section>
-
 <section id="desperdicio">
     <div class="cabecalho-secao revelar">
         <p class="etiqueta">Consumo inteligente</p>
@@ -554,38 +524,32 @@ footer strong { color: var(--dourado); }
             Conheça cinco atitudes que podem fazer diferença no dia a dia.
         </p>
     </div>
-
     <div class="grade">
         <article class="cartao revelar">
             <div class="icone">🤔</div>
             <h3>01. Repensar</h3>
             <p>Reflita sobre suas escolhas e pergunte se realmente precisa comprar algo.</p>
         </article>
-
         <article class="cartao revelar">
             <div class="icone">🙅</div>
             <h3>02. Recusar</h3>
             <p>Evite produtos descartáveis e embalagens desnecessárias sempre que possível.</p>
         </article>
-
         <article class="cartao revelar">
             <div class="icone">📉</div>
             <h3>03. Reduzir</h3>
             <p>Consuma apenas o necessário e planeje as compras para evitar excessos.</p>
         </article>
-
         <article class="cartao revelar">
             <div class="icone">🫙</div>
             <h3>04. Reutilizar</h3>
             <p>Dê novos usos aos objetos e aproveite os materiais sempre que for seguro.</p>
         </article>
-
         <article class="cartao revelar">
             <div class="icone">♻️</div>
             <h3>05. Reciclar</h3>
             <p>Separe corretamente os resíduos recicláveis e encaminhe-os à coleta adequada.</p>
         </article>
-
         <article class="cartao revelar">
             <div class="icone">🥕</div>
             <h3>Evite desperdícios</h3>
@@ -593,7 +557,6 @@ footer strong { color: var(--dourado); }
         </article>
     </div>
 </section>
-
 <section class="fundo-alternativo" id="sobre">
     <div class="cabecalho-secao revelar">
         <p class="etiqueta">Sobre o projeto</p>
@@ -607,25 +570,21 @@ footer strong { color: var(--dourado); }
             descarte de resíduos e redução de desperdícios.
         </p>
     </div>
-
     <div class="grade">
         <article class="cartao revelar">
             <h3>Nosso objetivo</h3>
             <p>Facilitar o acesso à informação e incentivar hábitos mais responsáveis.</p>
         </article>
-
         <article class="cartao revelar">
             <h3>Nossa proposta</h3>
             <p>Reunir orientações educativas sobre materiais, reciclagem e consumo consciente.</p>
         </article>
-
         <article class="cartao revelar">
             <h3>Nosso compromisso</h3>
             <p>Promover a conscientização e valorizar escolhas que contribuam para um futuro sustentável.</p>
         </article>
     </div>
 </section>
-
 <section class="faixa">
     <p class="etiqueta">O futuro começa agora</p>
     <h2>Faça parte da mudança.</h2>
@@ -635,7 +594,6 @@ footer strong { color: var(--dourado); }
     </a>
 </section>
 </main>
-
 <footer>
     <p><strong>PROJETEC · CTA</strong></p>
     <p>Sustentabilidade ao Seu Alcance</p>
@@ -644,29 +602,23 @@ footer strong { color: var(--dourado); }
         Projeto educativo de conscientização ambiental.
     </p>
 </footer>
-
 <button class="voltar-topo" id="voltarTopo" aria-label="Voltar ao início">
     ↑
 </button>
-
 <script>
 const busca = document.getElementById("busca");
 const linhas = Array.from(document.querySelectorAll("#materiais tr"));
 const mensagemBusca = document.getElementById("mensagemBusca");
-
 function pesquisarMaterial() {
     const termo = busca.value.trim().toLocaleLowerCase("pt-BR");
     let total = 0;
-
     linhas.forEach(function(linha) {
         const corresponde = linha.textContent
             .toLocaleLowerCase("pt-BR")
             .includes(termo);
-
         linha.hidden = !corresponde;
         if (corresponde) total++;
     });
-
     if (termo === "") {
         linhas.forEach(linha => linha.hidden = false);
         mensagemBusca.textContent = "Exibindo todos os materiais cadastrados.";
@@ -680,16 +632,12 @@ function pesquisarMaterial() {
                 : " materiais encontrados.");
     }
 }
-
 document.getElementById("botaoPesquisar")
     .addEventListener("click", pesquisarMaterial);
-
 busca.addEventListener("keydown", function(event) {
     if (event.key === "Enter") pesquisarMaterial();
 });
-
 const elementos = document.querySelectorAll(".revelar");
-
 if ("IntersectionObserver" in window) {
     const observador = new IntersectionObserver(function(entradas, obs) {
         entradas.forEach(function(entrada) {
@@ -699,18 +647,14 @@ if ("IntersectionObserver" in window) {
             }
         });
     }, { threshold: 0.12 });
-
     elementos.forEach(elemento => observador.observe(elemento));
 } else {
     elementos.forEach(elemento => elemento.classList.add("visivel"));
 }
-
 const voltarTopo = document.getElementById("voltarTopo");
-
 window.addEventListener("scroll", function() {
     voltarTopo.classList.toggle("visivel", window.scrollY > 400);
 });
-
 voltarTopo.addEventListener("click", function() {
     window.scrollTo({ top: 0, behavior: "smooth" });
 });
